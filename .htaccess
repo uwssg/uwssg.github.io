@@ -1,0 +1,5 @@
+Options +IncludesNoExec
+
+RewriteEngine on
+RewriteRule ^software/$ $1/software [R]
+RewriteRule ^software$ $1/research.shtml?research/software [R]
