@@ -1,0 +1,26 @@
+<!-- Check if vars are set, if not set them to somehting that make sense -->
+<!--#if expr="${title}" -->
+<!--#else -->
+  <!--#set var="title" value="Survey Science Group Pages" -->
+<!--#endif -->
+<div id="pageHeader">
+         <lsstlogo>
+         </lsstlogo>
+	 <logo>
+	    <a href="home_ssg.shtml"><img height="70px" border="0" src="images/SSG_logo4.jpg"   alt="SSG"></a>
+         </logo>
+		   <titlebar><!--#echo var="title" --></titlebar>
+		   <logotext><a href="http://www.astro.washington.edu">University of Washington Astronomy</a></logotext>
+		   <div id="nav1">
+		   <a href="home_ssg.shtml" class="<!--#echo var="home" -->">Home</a>
+		   <a href="research.shtml" class="<!--#echo var="research" -->">Research</a>
+		   <a href="lsst.shtml" class="<!--#echo var="LSST" -->">LSST</a>
+		   <a href="escience.shtml" class="<!--#echo var="escience" -->">eScience</a>
+<!--		   <a href="education.shtml" class="<!--#echo var="education" -->">Outreach</a> -->
+		   <a href="people.shtml" class="<!--#echo var="people" -->">People</a>
+<!--		   <a href="news.shtml" class="<!--#echo var="news" -->">News/Events</a> -->
+                   <a href="private.shtml" class="<!--#echo var="private" -->">Private</a>
+                   <a href="astroviz/astroviz.shtml" class="<!--#echo var="astroviz" -->">AstroViz</a>
+		   </div>
+
+</div>

@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>LSST&#8212;Home</title>
+	<link rel="stylesheet" href="../../css/lsst-mitigation.css" />
+	<link rel="stylesheet" href="../../css/lsst-nav.css" />
+</head>
+<body id="gallery" class="gallery two-col ">
+
+<!--#include virtual="/header.html" -->
+
+
+<div id="content">
+<div width="480" float="left">
+  <object width="480" height="290">
+  <param name="movie"  value="movies/LSST-small.m4v" />
+
+  <param name="allowFullScreen" value="true" />
+  <param name="allowScriptAccess" value="always" />
+  <embed src="movies/LSST-small.m4v" controls=console
+   allowFullScreen="true" allowScriptAccess="always"
+   autostart=false
+     type="application/x-mpeg" width="480" height="290"></embed>
+  </object>
+<br>
+<p class="fineprint">Animation Credit: Andy Connolly <a href="movies/LSST.m4v">Download animation</a> [24 MB MPEG4]</p>
+  Zoom into a simulated image embedded in the SDSS imagery (using Google Sky)
+</div>
+
+
+</div>
+ <!--#include virtual="/footer.html" -->
+
+</body>
+</html>

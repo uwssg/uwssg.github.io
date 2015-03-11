@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+<head profile="http://www.w3.org/2005/10/profile">
+<meta name="verify-v1" content="6bUteibNeHK9oN0G0XpFk122Zf/5WZ67sAHANRq4i44=" >
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+	<meta name="author" content="simon krughoff"/>
+	<meta name="keywords" content="" />
+	<meta name="robots" content="all" />
+   <link rel="icon"
+      href="images/favico.png"
+      type="image/png" />
+  <link rel="image_src" href="images/SSG_logo4.jpg" />
+
+	<title>Home Page of the University of Washington Survey Science Group</title>
+
+	<script type="text/javascript"></script>
+	
+	<style type="text/css" media="all">
+		@import "css/uwssg_v2.css";
+	</style>
+
+
+	<script type="text/javascript">
+	// Set up 3 image arrays
+	var mainImages1 = new Array()
+	var mainImages2 = new Array()
+	var mainImages3 = new Array()
+
+	// Add image files
+
+	mainImages1[0] = 'images/3mirrors.jpg'
+	mainImages1[1] = 'images/lsst-dusk.jpg'
+	mainImages1[2] = 'images/LSSTart_small.jpg'
+
+	mainImages2[0] = 'images/UW_quad.jpg'
+	mainImages2[1] = 'images/winter_fix.png'
+	mainImages2[2] = 'images/summer_fix.png'
+
+
+	mainImages3[1] = 'images/LSSTSim.jpg'
+	mainImages3[0] = 'images/KBO_moving_single.gif'
+	mainImages3[2] = 'images/pixelz.png'
+
+		
+	var j = 0
+	var p1 = mainImages1.length;
+	var p2 = mainImages2.length;
+	var p3 = mainImages3.length;
+
+	var whichImage1 = Math.floor(Math.random()*(p1));
+//	var whichImage2 = 0;
+	var whichImage2 = Math.floor(Math.random()*(p2));
+	var whichImage3 = Math.floor(Math.random()*(p3));
+	function showImage(){
+		document.write('<img height="200" border="0" alt="UW" src="'+mainImages1[whichImage1]+'">');
+		document.write('<img height="200" border="0" alt="UW" src="'+mainImages2[whichImage2]+'">');
+		document.write('<img height="200" border="0" alt="UW" src="'+mainImages3[whichImage3]+'">');
+	}
+
+	</script>
+
+</head>
+
+<!--
+This page is the root of the tree for the UW Survey Science Group pages. 
+ The pages linked from this level are: Home, Research, 
+LSST, eScience, Education, People, and News/Events
+-->
+
+<body>
+<!-- These are parameters to make the header look sweet.  The file header_main.html
+has the vaiables in the right place to interpret them.
+-->
+
+<!--#set var="title" value="Survey Science Group: Home" -->
+<!--#set var="home" value="here" -->
+<!--#include virtual="header_main.shtml" -->
+
+<div id="container">
+   <div id="mainText">
+   <!--#if expr="${QUERY_STRING}" -->
+     <!--#set var="pagename" value="${QUERY_STRING}.html" -->
+   <!--#else -->
+     <!--#set var="pagename" value="home_ssg.html" -->
+   <!--#endif -->
+   <!--#include virtual="$pagename" -->
+   </div>
+   <!--#include virtual="footer_main.html" -->
+
+</div>
+
+</body>
+</html>

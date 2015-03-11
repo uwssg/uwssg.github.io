@@ -1,0 +1,160 @@
+#main-nav {
+		width: 25%;
+		float: left;
+		color: #666;
+		margin-top: 1em;
+		}
+
+#main-nav a, #search a, #home #l-home li a, #gallery #l-gallery li a, #public #l-public li a, #science #l-science li a, #press #l-press li a, #about #l-about li a, #news #l-news li a, #banner2 a {
+	color: #ccc;
+	text-decoration: none;
+	}
+	
+	#logo img {
+		border: none;
+		}
+	
+#main-nav a:hover, #search a:hover, #home #l-home li a:hover, #gallery #l-gallery li a:hover, #public #l-public li a:hover, #science #l-science li a:hover, #press #l-press li a:hover, #about #l-about li a:hover, #news #l-news li a:hover {
+	color: #fff;
+	text-decoration: underline;
+	}
+
+/* hide secondary navigation */
+
+		#main-nav ul ul,  #main-nav #contact {
+			display: none;
+			}
+			
+/* show appropriate secondary navigation */
+
+			.home #main-nav ul ul#home-nav {
+				display: block;
+				}
+
+			.public #main-nav ul ul#public-nav {
+				display: block;
+				}
+			
+			.science #main-nav ul ul#science-nav {
+				display: block;
+				}
+			
+			.press #main-nav ul ul#press-nav {
+				display: block;
+				}
+			
+			.gallery #main-nav ul ul#gallery-nav {
+				display: block;
+				}
+							
+			.faq #main-nav ul ul#faq-nav {
+				display: block;
+				}
+			
+			.about #main-nav ul ul#about-nav, #about  #main-nav #contact, #team #main-nav #contact {
+				display: block;
+				}
+
+			.news #main-nav ul ul#news-nav {
+				display: block;
+				}
+
+/* highlight current page in navigation bar */
+
+	#home #l-home a, #public #l-public a, #outreach #l-outreach a, #interact #l-interact a, #learn #l-learn a, #links #l-links a, #public-faq #l-public-faq a, 
+	
+	#dark_matter #l-learn a, #darkmatter2 #l-learn a, #dark_energy #l-learn a, #transient #l-learn a, #oss #l-learn a, #neo1 #l-learn a, #milkyway #l-learn a, #darkenergy2 #l-learn a, #mass3d #l-learn a, 
+	
+
+	#science #l-science a, #development #l-development a, #concept_camera #l-development a, #concept_telescope #l-development a, #concept_data #l-development a, #optical_design #l-development a, #mirror_design #l-development a, #site_selection #l-development a, #datamgmt_fac #l-development a, #datamgmt_pipelines #l-development a, #datamgmt_products #l-development a, #data_history #l-development a, 
+	
+	
+	#science_goals #l-science_goals a, #science_portfolio #l-science_goals a, #scientist_dark_matter #l-science_goals a, #scientist_dark_energy #l-science_goals a, #scientist_solar_system #l-science_goals a, #scientist_transient #l-science_goals a, #scientist_milky_way #l-science_goals a, #scientist_outer_solar_system #l-science_goals a, #scientist_near_earth_objects #l-science_goals a, #scientist_fundamental_physics #l-science_goals a, #scientist_cosmic_shear #l-science_goals a, #scientist_cmb_shear #l-science_goals a, #scientist_baryon_oscillations #l-science_goals a, #scientist_shear_statistics #l-science_goals a, #scientist_supernovae #l-science_goals a, #scientist_photometric_redshift #l-science_goals a, 
+	
+	
+	#status #l-status a, #survey_requirements #l-survey_requirements a, #system_design #l-system_design a, #data #l-data a, #technology #l-technology a, #petascale #l-technology a, #participate #l-participate a, #science-faq #l-science-faq a,  #timeline #l-science-timeline a,
+
+	#press #l-press a, #facts #l-facts a, #media-contacts #l-media-contacts a, #timeline #l-timeline a, #press-archive #l-archive a, 
+
+	#about #l-about a, #team #l-team a, #contributors #l-contributors a, #technology #l-tech a, #status #l-stat a, #timeline #l-about-timeline a,
+
+	#news #l-news a, #enews #l-enews a, #events #l-events a, #public #l-public a, #in-the-press #l-in-the-press a,  #timeline #l-press-timeline a,
+	
+	#faq #l-pub-faq a, #public-faq #l-pub-faq a, #science-faq #l-sci-faq a, 
+
+	#gallery #l-gallery a, #telescope #l-telescope a, #site #l-site a, #mirror-casting #l-mirror-casting a, #todd-mason #l-todd-mason a, #people #l-people a, #camera #l-camera a  
+	
+	
+	
+	
+	{
+		color: red;
+		cursor: default;
+		text-decoration: none;
+		}
+	
+
+			
+		#main-nav h4 {
+			margin: 10px 0 0 20px;
+			padding-left: 0;
+			width: 70%;
+			color: red;
+			font-weight: normal;
+			font-size: 12px;
+			}
+		
+		#main-nav ul {
+			margin-left: 14px;
+			margin-bottom: 2em;
+			padding-left: 0;
+			width: 80%;
+			}
+		
+		#main-nav li {
+			background: #1a1a1a url(../images/nav2-bg.gif) top left repeat-x;
+			list-style-type: none;
+			padding: 1px 5px;
+			margin-left: 0;
+			font: 18px/30px Helvetica, Arial, Verdana Lucida, sans-serif;
+			}
+
+		#main-nav ul ul {
+			margin-left: 5%;
+			margin-bottom: 0;
+			padding-left: 0;
+			width: 95%;
+			}
+		
+		#main-nav li li {
+			background: #1a1a1a url(../images/nav2-bg.gif) top left repeat-x;
+			list-style-type: none;
+			padding: 1px 5px;
+			margin-left: 0;
+			font: 14px/20px Helvetica, Arial, Verdana Lucida, sans-serif;
+			}
+
+
+ #main-nav #contact {
+ 	background: #333;
+ 	width: 75%;
+ 	padding: 5px;
+ 	margin: 0 0 0 15px;
+ 	color: #ccc;
+ 	}
+ 	
+ 	#main-nav #contact h4 {
+ 		font-size: 16px;
+ 		color: #ccc;
+ 		margin: 0;
+ 		padding: 0;
+ 		}
+ 		
+ 	#main-nav #contact a {
+ 		text-decoration: underline;
+ 		}
+
+ 	#main-nav #contact p {
+ 		font-size: 12px;
+ 		margin-left: 15px;
+ 		}

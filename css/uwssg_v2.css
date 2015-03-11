@@ -1,0 +1,301 @@
+/* This file was based on the */
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+/* Modified Dec. 09 2008 by Simon Krughoff University of Washington using Bluefish V 1.0.7 */
+
+/* basic elements */
+html {
+	margin: 0;
+	padding: 0;
+	}
+body { 
+	font: 13px georgia, sans-serif;
+	line-height: 1.6;
+	color: #555753; 
+	margin: 0; 
+	padding: 0;
+	}
+p { 
+	margin-top: 0; 
+	text-align: justify;
+	}
+h1 {
+   color: black;
+}
+h2 {
+   color: black;
+   margin-bottom: 0px;
+}
+
+h3 { 
+	font: italic normal 1.4em georgia, sans-serif;
+	letter-spacing: 1px; 
+	margin-bottom: 0; 
+	color: #333333
+	}
+a {
+  font-weight: bold;
+  text-decoration: none;
+  color:#0000ff;
+  }
+a:link { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #0000ff;
+	}
+a:visited { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #0f7af3;
+	}
+a:hover, a:active { 
+	text-decoration: underline; 
+	color: red;
+	}
+acronym {
+	border-bottom: none;
+	}
+	
+/* specific divs */
+#container { 
+   background-color:#fbfbfb;
+   padding: 30px 145px 0 20px; 
+   margin-top: 30px;
+   margin-right: 120px;
+   margin-left: 30px;
+	width: 857px;
+	margin: 0px;
+	position: absolute;
+	}
+	
+#figurel{
+   float: left;
+   padding: 10px 10px 10px 10px;
+}
+
+#mycaption{
+     font-style: italic;
+   font-size: 80%;
+  } 
+
+#mycaptionfig{
+   padding: 0 0 0 0;
+   font-style: italic;
+   font-size: 80%;
+   width: 250px; 
+   float: left;
+} 
+
+#mycaptionfigr{
+   padding: 0 0 0 0;
+   font-style: italic;
+   font-size: 80%;
+   float: right;
+} 
+#figurer{
+   clear: all;
+   float: right;
+   padding: 10px 10px 10px 10px;
+}
+#figurec{
+   text-align: center;
+   padding: 10px 10px 10px 10px;
+}
+#sidebar {
+   padding: 0 0 0 0;
+	margin-left: 850px; 
+	margin-top: 80px;
+	line-height: 1;
+	position: absolute; 
+	top: 0; 
+	left: 0;
+	text-align: left;
+	width: 166px;
+	height: 100%;
+	}
+	
+#sidebar ul{
+  list-style: none;
+  font-weight: bold;
+  }
+  
+#sidebar a{
+  color: #555753;
+  }
+#sidebar a:hover, a:active { 
+	text-decoration: none; 
+	color: #aaaaaa;
+	}
+  
+#sidebar ul li{
+  padding: 3px 3px 3px 3px;
+  background: #eeeeee;
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  }
+  
+#sidebar ul li.thissection{
+  padding: 3px 3px 3px 3px;
+  background: #555753;
+  color: #eeeeee;
+  border: 1px solid #000000;
+  } 
+
+#sidebar ul li.thispage{
+  padding: 3px 3px 3px 3px;
+  background: #777975;
+  color: #eeeeee;
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  } 
+  
+#pageHeader {
+	width: 1022px;
+	height: 110px;
+	background-image: url(../images/gal_web.png);
+}
+#pageHeader a{
+  text-decoration: none;
+  color: #b49fbd;
+  }
+#pageHeader a.hover{
+  color: #b49fbd;
+  }
+#pageHeader logo{
+   margin-top: 5px;
+   margin-left: 5px;
+   position: absolute;
+   height: 110px;
+   width: 110px;
+	}
+#pageHeader lsstlogo{
+   float: right;
+   margin-right: 10px;
+   margin-top: 10px;
+   height: 80px;
+   color: blue;
+	}
+#pageHeader logotext{
+   top: 15px;
+   left: 190px;
+   font-size: 15px;
+   font-weight: bold;
+   text-align: left;
+   color: #b49fbd;
+   position: absolute;
+	}
+#pageHeader titlebar{
+  top: 40px;
+  left: 190px;
+  position: absolute;
+  text-align: left;
+  font-weight: bold;
+  font-style: italic;
+  color: white;
+  font-size: 20px;
+  }
+
+#nav1 {
+  top: 80px;
+  left: 3px;
+  position: absolute;
+  width: 1022px;
+  }
+  
+#nav1 a{
+  text-decoration:none;
+  background:url(../images/out.png);
+  color: white;
+  font-weight: bold;
+  font-family: arial, sans-serif;
+  font-size: 13px;
+  border:1px solid #bdbdbd;
+  padding:2px 2px;
+  height:100%;
+  }
+  
+#nav1 a.here{
+  text-decoration:none;
+  background:url(../images/outhere.png);
+  color: white;
+  font-weight: bold;
+  font-family: arial, sans-serif;
+  font-size: 15px;
+  border:2px solid #bdbdbd;
+  padding:2px 2px;
+  height:100%;
+  }
+  
+#nav1 a:hover{
+  color: red;
+}
+
+#quickSummary {
+	clear:both; 
+	margin: 20px 20px 10px 20px; 
+	width: 170px; 
+	float: left;
+	}
+
+#quickSummary2 {
+	clear:both; 
+	margin: 20px 0px 10px 30px; 
+	width: 170px; 
+	float: right;
+	}
+	
+#quickSummary3 {
+	clear:both;
+	margin-left: 860px;
+	margin-top: 200px;
+	position: absolute;
+	width: 140px;
+   padding: 0px 0px 0px 6px;
+	}
+
+#quickSummary p {
+	font: italic 10pt/22pt georgia; 
+	text-align: justify;
+	}
+
+#quickSummary2 p {
+	font: italic 10pt/22pt georgia; 
+	text-align: justify;
+	}
+
+#mainText {	
+	padding-left: 10px; 
+	margin-bottom: 40px;
+	}
+
+#footer { 
+	}
+#footerlogo{
+  float: left;
+  width: 60px;
+}
+
+#footer p{
+   padding: 10px 30px 0 160px;
+   font-size: 9px;
+   text-align: left;
+   }
+#footer hr{
+   color: #6ba5d7;
+   }
+
+#codeBox {
+   margin: 0px auto;
+   width: 75%;
+   text-align: left;
+   padding: 5px;
+   background-color: #CfD2D1;
+   border: 1px solid black;
+   font-size: 12px;
+}
+
+
+ul.disc {list-style:disc outside}
+

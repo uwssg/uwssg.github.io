@@ -1,0 +1,79 @@
+<div id="sidebar">
+ <ul>
+  <li class="thissection">This Section</li>
+  <li><a href="lsst.shtml">UW LSST Home</a></li>
+  <li><a href="home_ssg.shtml">UW SSG Home</a></li>
+<!---  <li class="thispage">This Page</li>--->
+  <li class="thissection">Related Links</li>
+  <li><a href="http://www.lsst.org">Public LSST Site</a></li>
+  <li><a href="https://www.lsstcorp.org">LSST Corp. Site</a></li>
+  <li><a href="https://www.lsstcorp.org/docushare/dsweb/HomePage">LSST Docushare</a></li>
+  <li><a href="http://lsstdev.ncsa.uiuc.edu/trac/">LSST Software: Trac</a></li>
+  <li><a href="http://www.astro.washington.edu/users/becker/LSST/local/">Private UW Docs</a></li>
+  <li><a href="http://dev.lsstcorp.org/trac/wiki/MinutesOfImageDetWG-2009">Apps. WG Minutes</a></li>
+ </ul>
+</div>
+
+<h1>Data Management Tasks at UW </h1> 
+
+
+<p>The topics below outline the main tasks assigned to the LSST DM team
+at UW.  The team currently comprises
+
+<a href="people.shtml?people/acb">Andrew Becker</a>, <a
+href="people.shtml?people/ajc">Andy Connolly</a>, <a
+href="people.shtml?people/sk">Simon Krughoff</a>, <a
+href="http://www.astro.washington.edu/users/rowen/">Russell Owen</a>,
+and <a href="people.shtml?people/nms">Nicole Silvestri</a>. More
+information about the software and the development can be found on the
+<a href="http://dev.lsstcorp.org/trac/"> LSST Trac </a> pages.
+</p>
+
+<a name="isr"></a><h2>Instrument Signature Removal</h2>
+<p>
+The Data Management group at UW is responsible for writing the code to remove the instrument signature
+from data coming from the camera.  Since the camera is physically large (about 0.5x0.5 m) and has a very large field of view (10 square degrees) and made up almost 200 individual chips, the signature imprinted by the optics and electronics can vary 
+significantly over a single huge (3 gigapixel) image.  All the individual chips must be corrected for several instrumental effects.  Some examples are:
+<ul>
+<li>flat fielding -- correcting for difference in sensitivity from pixel to pixel</li>
+<li>bias correction -- removal of any signal contributed by the electronics </li>
+<li>linearization -- correction for any nonlinearity in response as a function of illumination</li>
+<li>fringe correction -- removal of artifacts caused by interference within the silicon caused by internal reflection</li>
+<li>crosstalk removal -- removal of any signal caused by mutual induction from current in the readout leads</li>
+</ul>
+</p>
+
+<a name="diffim"></a><h2>Difference Imaging</h2>
+<p>
+Andy B. add info here...
+</p>
+
+<a name="psf"></a><h2>PSF Determination</h2>
+<p>
+Andy B. add info here...
+</p>
+
+<a name="coadds"></a><h2>Template Co-Addition</h2>
+<p>LSST will use coadded template images for several purposes, including image subtraction and
+detecting faint objects for use by deep detection. We are examining various methods of coadding images
+including match filtering (convolving each input image by its PSF to filter out noise).
+</p>
+
+<a name="convolve"></a><h2>Convolution</h2>
+
+<p>The LSST software stack supports convolution of images and masked
+images with kernels of various types. Most of these can be spatially
+varying. For more information see the <a
+href="http://dev.lsstcorp.org/doxygen/release/afw/">doxygen-generated
+documentation for afw</a>, in particular the convolve function and the
+Kernel class.
+</p>
+
+<a name="stack"></a><h2>The Software Stack at UW</h2>
+
+<p>The LSST software data processing software stack is available in
+/astro/apps/lsst64 as described here: <a
+href="http://librarian.phys.washington.edu/astro/index.php/LSSTDP">LSST
+Data Processing Software</a> on the UW Astronomy wiki. That page has
+links to documentation and a source code browser.
+</p>

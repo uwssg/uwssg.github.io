@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>LSST&#8212;Home</title>
+	<link rel="stylesheet" href="../../css/lsst-mitigation.css" />
+	<link rel="stylesheet" href="../../css/lsst-nav.css" />
+</head>
+<body id="public" class="two-col public">
+
+<!--#include virtual="/header.html" -->
+
+<div id="content">
+<p>
+
+
+<h4> Introduction </h4>
+
+
+The organization of the image simulator is based on a Monte Carlo
+history of each photon emitted by sources such as galaxies or stars.
+The <a href="../catalogs" >input to the simulator</a> is a model of
+the sky composed of galaxies and stars with their associated spectral
+energy distributions in the form of images with a fine spatial
+resolution much better than the LSST resolution. Multiple versions of
+the models can be simultaneously realized as a series of photons with
+precise sky locations and wavelengths. The final synthetic sky can be
+as simple as a grid of stars or as complex as a series of shells in z
+that comprise a 3D cosmological model composed of nearby stars,
+galaxies at intermediate z associated with dark matter and distant
+galaxies at high z that are distorted by the gravitational lensing of
+the emitted photons as they pass through dark matter at intermediate
+z. This versatility supports simulations of many types ranging from
+evaluation of PSF effects of the atmosphere on the images of stars and
+galaxies to the simulation and full analysis of a particular
+cosmological model. Also space-based images with fine angular
+resolution can be used directly as input sky models. The concept
+end-to-end refers to the history of the photons.  The following list
+is the steps of the simulator:
+
+<ul> <li> Photons are selected from a sky model using images and
+spectral energy distributions </li>
+
+<li>A set of atmosphere screens based on turbulence models are used to
+refract the photons</li>
+
+<li>Each photon is traced through the complete set of LSST optics</li>
+
+<li>The photons interact and are converted in a detector simulator and
+are readout</li> </ul>
+
+The wavelength dependence of the photons is modeled at all stages of
+the simulation process. The fidelity of the current version of the
+simulator is designed to include all details that affect science
+performance with an emphasis on astrometry, photometry. Future
+versions will include details to support other science topics and
+secondary effects on weak lensing.
+
+<h4> The Atmosphere </h4>
+
+The atmosphere is modeled by a series of layers each with an
+independent 3D Kolmogorov model that is averaged into an equivalent
+screen with refractive index variations in 2D <a href="#fig1" >(Figure
+1)</a>. Each layer has an outer scale, a random realization of
+gaussian amplitude phase independent Fourier modes with a seeing for
+each layer set by the Fried parameter R0.  The time dependence of the
+atmospheric seeing is modeled by the frozen translating screen
+approximation with a wind velocity and direction. The single photon
+history is traced through each layer of the atmosphere via a newly
+invented technique that avoids the need to do Fourier transforms of
+the wavefront perturbations.  The approach is only valid for large
+aperture telescopes with exposure times of at least 10-20 seconds. A
+practical weak lensing simulation requires this approach since each
+photon from a faint galaxy (only 1000s) in a single integration (15
+seconds) occurs at a different time within the exposure window for
+which the atmospheric structure has changed significantly. We can
+avoid Fourier transforms because the diffraction effects are averaged
+over a modest exposure (15 seconds) and over a large aperture (8
+m). The figure below shows an example of a single Kolmogorov phase
+screen that spans a region of the atmosphere much larger than the
+aperture of the telescope.  This allows for wind drifts during the
+exposure and for full wide field (3.5 degree diameter) images.<p>
+
+ <center>
+<a name="fig1"></a>
+<img src="images/atmosphere.jpg" width = 300><p>
+
+Figure 1:  Phase screen of atmospheric turbulence
+</center>
+
+<h4> The Telescope </h4>
+
+A geometric raytrace code for the LSST designed optics has been
+developed.  The raytrace handles reflection/refraction after
+calculating ray intercepts.  The full wavelength-dependent refraction
+and filter transmission effects as well as stray light are included.
+<a href="#fig2" >Figure 2</a> shows the current LSST design and shows
+rays being reflected and refracted through the optics: the three
+mirrors, three lenses, the filter, and detector.  On the surfaces of
+all the mirrors we currently apply a set of perturbations consisting
+of a set of orthogonal functions with a power spectrum resembling
+realistic perturbations found with the Kitt Peak 4m telescope when the
+active optics control system was operating.  This model is designed to
+mimic the surface perturbations expected from thermal and mechanical
+distortions while a modern control system is being used.<p>
+
+<center>
+ <a name="fig2"></a>
+<img src="images/telescopeRay.jpg" width=300 ><p>
+Figure 2:   Raytrace of LSST optics
+</center>
+
+<h4> The Detector </h4>
+
+The current detector model built into the simulator treats conversion
+of individual photons into charge carriers collected at the
+channel. Each ray is refracted into the silicon according to its
+wavelength and incidence angle. The photon either interacts or doesn't
+interact, depending on its absorption range (dependent on wavelength
+and temperature of the silicon). The charge diffuses laterally during
+the time it takes to drift to the channel. The amount of diffusion is
+dictated by the strength of the electric field at the point of
+interaction.  The resulting PSF has limiting behavior in the two
+extremes of the instrument's band. The short wavelength achromaticity
+is broadened further by shallow interaction distribution in the CCD
+(contributing &sigma =4 &mu m in each lateral dimension). On the long
+wavelength end, the PSF is dominated by the beam's refraction through
+the thick (100 &mu m) silicon, combined with the large interaction
+length. <a href="#fig3" > Figure 3</a> shows a simulation of a field
+for the LSST with and without sky background. Every photon was
+raytraced using complete wavelength-dependent effects through 12
+layers of atmospheric turbulence, the complete LSST designed optics,
+and the detector. Stars and galaxies were simulated down to r=28 and
+sky noise background was added (including the impact of the moon on
+the sky background).  The end-to-end simulation of a complete focal
+plane takes approximately 2000 CPU hours.  Approximately
+10<sup>8</sup> photons were simulated. <p>
+
+ 
+<a name="fig3"></a> <center> <img
+src="images/ImageSimNoBackgroundSmall.png" width=300 > <img
+src="images/ImageSimBackgroundSmall.png" width=300 ><p> Figure 3: A
+simulation of a single CCD for the LSST without (left panel) and with
+(right panel) a sky backgound </center>
+
+
+
+<h4> Modelling Image Distortions </h4>
+
+The ellipticity of the point spread function (PSF) of any ground based
+telescope depends both on the properties of the atmosphere and the
+design and operation of the telescope and detector.  Understanding the
+ellipticity of the PSF and its correlation across the field is
+critical to the success of the LSST (e.g. for weak lensing
+measurements).  Our simulations demonstrate that the ellipticity may
+receive similar contributions from the optics and the atmosphere (1 to
+2% for each), which is similar to the shear from a massive foreground
+cluster of galaxies.  The optics contribution to the ellipticity of
+the PSF, however, is highly correlated on several hundred arcsecond
+scales.  This is due to the fact that the secondary and tertiary
+mirrors in the LSST optics chain are relatively close to the pupil
+plane.  Photons emitted from all points in the field of view see a
+similar part of the surfaces of all the mirrors.  Every perturbation,
+therefore, affects the PSF across the field of view in a similar way.
+While it is important to control the overall ellipticity induced by
+the optics in the design of LSST, it is anticipated from these
+simulations that the optics contribution the ellipticity of the PSF
+will be easily correctable, since it is highly correlated.  Studies
+are continuing to identify other instrumental problems that could
+affect weak lensing measurements. <a href="#fig4" > Figure 4</a>
+demonstrates the expected PSF function when we turn on various parts
+of the simulator.  The upper left image shows the PSF due to the
+optics alone with the mirror perturbations.  The second image shows
+the PSF after the detector simulator is included.  The lower left
+image shows the PSF when the atmosphere with no wind is included.  The
+lower right shows the same but with wind.  Clearly, the effect of wind
+reduces the ellipticity due to a larger part of the atmospheric
+turbulence that is being averaged.<p>
+
+<a name="fig4"></a> 
+<center>
+<img src="images/psfs.jpg" width=300><p>
+Figure 4: Simulated PSF due to the optics, atmosphere, wind, and
+detector. The colors represent where the photons hit the lsst aperture
+(red is the outer annulus, blue is the inner).  The images are 120x100
+microns, which is 2.4x2 arcseconds. <p>
+</center>
+<p>
+
+</div>
+
+<!--#include virtual="/footer.html" -->
+
+</body>
+</html>

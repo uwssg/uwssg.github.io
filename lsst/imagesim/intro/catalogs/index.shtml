@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>LSST&#8212;Home</title>
+	<link rel="stylesheet" href="/css/lsst-mitigation.css" />
+	<link rel="stylesheet" href="/css/lsst-nav.css" />
+</head>
+<body id="public" class="two-col public">
+
+<!--#include virtual="/header.html" -->
+
+<div id="content">
+<p>
+<h4> Galaxy Catalogs </h4>
+
+In order to reproduce the spatial, morphological, and spectral energy
+distributions of galaxies that are targetted by LSST, we currently use
+the Millennium Simulation galaxy catalog as a starting point. The
+models presented in Kitzbichler & White (2007) introduce baryon
+physics into the Millennium Simulation that reproduce the color,
+luminosity, and clustering distribution observed in large and deep
+surveys. The baryonic physics in the Kitzbichler & White (2007) models
+include gas cooling, heating from star formation, supernovae, and
+'radio mode' feedback. A model for the ISM dust produces a good match
+with the color-luminosity relation seen in deep surveys. The models of
+the Millennium Simulation follow galaxies in a box that is 500 Mpc
+h<sup>-1</sup>, on a side, simulating a light-cone survey with an area
+of 11.5 x 2.3-deg<sup>2</sup> out to a redshift of z=1 that has no
+repeating objects. To reproduce the LSST sky coverage the resulting
+2x2 deg galaxy catalogs from Kitzbichler & White are tiled across the
+sky.
+
+<br>
+
+To meet LSST photometric science goals, a detailed modeling of the
+spectral energy distributions (SEDs) for all source is required.  The
+SED of each galaxy is estimated using the Bruzual & Charlot (2003)
+stellar population models.  The Kitzbichler & White (2007) models
+provide SDSS g, r, i, z-band magnitudes, Johnson Filter K-band
+magnitudes, and redshift for every galaxy, which enables the Bruzual &
+Charlot (2003) model spectra to be fit to all galaxies in a
+post-processing step.  With the appropriate SED and redshift, the LSST
+apparent magnitudes are calculated for all sources.  This enables a
+characterization of each simulated galaxy's star formation history.
+Using the models of Batissta et al (2006) each galaxy in the
+Millennium Simulation is assigned a morphological profile.  The
+current implementation assigns each galaxy a disk-to-total flux ratio,
+position angle in the sky, inclination along the line-of-sight, bulge
+radius, and disk radius.  More accurate galaxy profiles, including
+high-frequency spatial structure such as HII regions and Spiral Arms,
+can be simulated using FITS images as input into the simulator.  
+<p>
+
+<a href="fig1"></a>
+<center>
+<img src="images/MilleniumLightCone.jpg" width=300></img><br>
+Figure 1: The simulated light cone from Kitzbischler & White
+</center>
+
+
+<h4> Stellar Catalogs </h4>
+
+Stars are included in the Image Simulator with full SEDs, spatial
+velocities, and positions.  Selecting stellar populations with a wide
+range in spatial distribution and velocity parameters will demonstrate
+LSST's science-goal of mapping the Milky Way's structure.  The SEDs
+for stars are derived from Kurucz models. The model used to generate
+main sequence stars is based on work done by Juric et. al. The model
+includes user-specified amounts of thick-disk, thin-disk, and halo
+stars. Each version of a catalog contains metadata on metallicity,
+temperature, luminosity-type, and surface gravity, allowing the user
+to search for correlations between observed LSST photometry and
+physical information about stars using the simulated data. The catalog
+will be updated to include dwarf and giant stars.
+
+<!--- <h4> Solar System Catalogs </h4> !--->
+
+
+<h4> Catalog Query Tool </h4>
+
+As the LSST is designed to study all ranges of astronomical phenomena,
+a detailed catalog of the properties of objects has been
+developed. Associated with the is a Query Tool that enables, for
+example, a user to have a list of object parameters returned from a
+query of the catalog after giving the sky coordinates and observation
+Epoch.  The LSST input catalog includes stars, galaxies, solar system
+objects, and transients.  The existence of a wide range of variable
+phenomena in the sky require the catalog, and query tool, to keep
+track of observing epoch that sources have been observed.  With such a
+wide range of light curves, a single light curve cannot be adopted,
+and instead a light-curve interpolator has been developed. This light
+curve interpolator does not restrict LSST to a particular type of
+transient object, but allows any variable object to be included in the
+LSST framework by specifying the brightness as a function of time.
+These variable objects currently included supernoave, active stars,
+AGN, and solar system objects.  Active Galactic Nuclei are included in
+the simulator as point source on top of galaxy profiles, with a
+specific parameters for the light curve simulator.
+
+
+</div>
+
+<!--#include virtual="/footer.html" -->
+
+</body>
+</html>

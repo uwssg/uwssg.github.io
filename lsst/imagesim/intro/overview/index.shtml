@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>LSST&#8212;Home</title>
+	<link rel="stylesheet" href="/css/lsst-mitigation.css" />
+	<link rel="stylesheet" href="/css/lsst-nav.css" />
+</head>
+<body id="public" class="two-col public">
+
+<!--#include virtual="/header.html" -->
+
+<div id="content">
+
+<p>
+
+<h4> LSST Image Simulation </h4>
+
+The image simulation group provides high fidelity end-to-end
+simulations of the sky. These simulated images and catalogs extend to
+r=28 (deeper than the expected 10 year depth of the LSST coadded
+images) and are used in: designing and testing algorithms for the use
+by the data management groups, evaluating the capabilities and
+scalability of the reduction and analysis pipelines, testing and
+optimizing the scienctific returns of the LSST survey and providing
+realistic LSST data to the science collaborations to evaluate the
+expected performance of LSST.
+<p>
+
+<center>
+<img src = "images/FlowChart.png" width = 300><br>
+Figure 1: The data flow from catalogs to images for the LSST
+</center>
+<p>
+
+Figure 1 shows the flow of the data through the LSST simulation
+framework. Catalogs from cosmological and Galactic structure models
+(<bf> base catalogs </bf>) are stored with a database enabling the
+generation of a view of the sky above the atmosphere. These base
+catalogs are derived from different simulation groups and include the
+spectral, photometric, astrometric and morphological properties of the
+astronomical sources. This static view of the sky has been extended to
+include transient events and moving sources (e.g. supernovae, variable
+stars and AGN, proper motions and Solar System objects).
+<p>
+
+The base catalogs are queried based on simulated observation sequences
+from the operational simulator (<a
+href="http://opsimcvs.tuc.noao.edu/" >OpSim </a>) creating a series of
+<bf> instance catalogs </br>. The time together with the RA and Dec of
+each pointing enable the appropriate airmass, sky background and
+observing conditions to be propagated through the simulations (as well
+as incorporating variability and moving sources). At this point, the
+catalogs are output, with associated uncertainties, as LSST simulated
+catalogs and are reformatted for input into the image simulator.
+<p>
+
+The image simulator samples from the sources within the catalogs
+(including the morphological and spectral information). Each photon is
+traced photons through a multi-layer the atmosphere, through the
+telescope optics and detector. For each focal plane we simulate
+10<sup>11</sup> photons (not including sky photons) to produce a total
+of 189 4096x4096 CCD images. The images are formatted as standard FITS
+files (with appropriate World Coordinate Systems) for access by
+scientists and for input into the LSST data reduction systems.
+
+
+</div>
+
+<!--#include virtual="/footer.html" -->
+
+</body>
+</html>

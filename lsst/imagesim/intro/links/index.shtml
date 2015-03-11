@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>LSST&#8212;Home</title>
+	<link rel="stylesheet" href="../../css/lsst-mitigation.css" />
+	<link rel="stylesheet" href="../../css/lsst-nav.css" />
+</head>
+<body id="public" class="two-col public">
+
+<!--#include virtual="/header.html" -->
+
+
+<div id="content">
+<p>
+The LSST is developing a range of tools to help scientists to
+understand the expect characteristics of the LSST. These range from
+simulating images based on ray tracing photons, to simulations of the
+expected cadence of the surveys to provide estimates of the depth of
+the LSST as a function of time, to simulations of the expected
+signal-to-noise of a given source based on the LSST exposure times. We provide links to these ongoing programs <p>
+<p> 
+
+<a href="http://www.lsst.org/"> LSST </a> the main site for LSST
+information which provides links to the the science goals, survey
+characteristics and news about the development of the LSST.
+<p>
+
+<a href="http://opsimcvs.tuc.noao.edu/"> Operational Simulator </a>
+which simulates the cadence of the LSST observations and how well
+these etendues can meet the survey requirements. The simulator
+includes models for weather and local seeing based on actual site
+measurements, lunar cycle and the telescopes dynamic characteristics.
+<p>
+
+<a href="http://dls.physics.ucdavis.edu/etc"> Exposure Time Calculator
+</a> which simulates the expected depths and signal-to-noise based on
+the sensitivities, sky brightness and source characteristics.
+<p>
+
+
+</div>
+
+<!--#include virtual="/footer.html" -->
+
+</body>
+</html>

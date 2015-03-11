@@ -1,0 +1,506 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>LSST&#8212;Home</title>
+	<link rel="stylesheet" href="../../css/lsst-mitigation.css" />
+	<link rel="stylesheet" href="../../css/lsst-nav.css" />
+</head>
+<body id="faq" class="faq two-col ">
+
+<!--#include virtual="/header.html" -->
+
+
+<div id="content">
+<H1>Questions and Answers</H1>
+
+<P> This is the FAQ for scientists. Would you prefer the 
+<A HREF="http://lsst.org/lsst/faq/public-faq"> public FAQ</A>? 
+
+<BR>
+Feel free to <a href="mailto:ohal@ucdavis.edu,tyson@lsst.org"> ask a new
+question.</a>
+
+<div id="index">
+<p>Q: <a href="#q1">What is the LSST?</a> </p>
+<p>Q: <a href="#q2">What will the survey coverage be?</a> </p>
+<p>Q: <a href="#q3"> What does &#8220;Synoptic&#8221; mean? </a> </p>
+
+<p>Q: <a href="#q4">Why do we need the LSST?</a> </p>
+<p>Q: <a href="#q5">Where does LSST rank among the many proposed national scientific facilities? 
+</a> </p>
+<p>Q: <a href="#q6">Why did you choose to build the telescope in Chile?</a></p>
+<p>Q: <a href="#q7">What is the LSST schedule and cost?</a></p>
+<p>Q: <a href="#q8">Who is involved with LSST?</a></p>
+
+<p>Q: <a href="#q9">Why build an entirely new telescope for this task?</a> </p>
+<p>Q: <a href="#q10">Why an 8.4 meter mirror with a 3.5 degree field?</a> </p>
+<p>Q: <a href="#q11">Why not a space mission?</a> </p>
+<p>Q: <a href="#q12">What are the technology challenges and scale of effort?</a> </p>
+<p>Q: <a href="#q13">How does LSST probe the physics of dark energy?</a> </p>
+
+<p>Q: <a href="#q14">Why do you need such accurate measurements of the shear power spectrum?</a> </p>
+<p>Q: <a href="#q15">Will it be possible to subscribe to real time alerts of LSST discoveries?</a> </p>
+<p>Q: <a href="#q16">Will the full resolution, full depth image data be available to
+download? </a> </p>
+<p>Q: <a href="#q17">Will LSST imaging data be available world-wide for scientific use?</a> </p>
+<p>Q: <a href="#q18">What are the data management challenges? </a> </p>
+
+<p>Q: <a href="#q19">I have questions. I'd like to make a scientific contribution to this
+project. Who should I contact?</a> </p>
+</div>
+
+
+<HR id="q1" class="dec">
+<p class="q"><STRONG>Q: </STRONG>What is the LSST?</p>
+<p class="a"><STRONG>A: </STRONG> 
+The LSST, or the Large Synoptic Survey Telescope, is a facility that will produce a 6-band (0.3-1.1
+micron) wide-field deep astronomical survey of over 20,000 square degrees of the
+southern sky using an 8.4-meter ground-based telescope.
+Each patch of sky will be visited about 1000 times in ten years.
+The LSST leverages innovative technology in all subsystems:
+the <a href="http://www.lsst.org/lsst/gallery/camera">camera</a>
+(3200 Megapixels, which will be the world's largest digital camera),
+
+<a href="http://www.lsst.org/lsst/gallery/telescope">telescope</a>
+(simultaneous casting of the primary and tertiary
+<a href="http://www.lsst.org/lsst/gallery/mirror-casting">mirrors</a>;
+two aspheric optical surfaces on one substrate), a 9.6 square degree field of
+view with excellent image quality, and
+<a href="http://www.lsst.org/lsst/science/data">data management</a>
+(30 terabytes of data nightly, nearly instant alerts
+issued for objects that change in position or brightness).
+This innovation on all fronts has attracted many
+<a href="http://www.lsst.org/lsst/about/team">institutional
+members</a> and hundreds of other scientists in ten 
+<a href="http://www.lsst.org/lsst/science/participate">science
+collaborations.</a>
+Click <a href="http://www.lsst.org/lsst/science/overview"> here </a> 
+
+for a description of the LSST system and science reach, written for the
+scientific community.
+</p>
+
+<HR id="q2" class="dec">
+<p class="q"><STRONG>Q: </STRONG>What will the survey coverage be?</p>
+<p class="a"><STRONG>A: </STRONG> 
+LSST will repeatedly scan the sky south of +10 deg DEC accumulating 1000 pairs
+of 15 second exposures through ugrizy filters, yielding a dataset that simultaneously
+satisfies the majority of the <a href="http://www.lsst.org/science/science_portfolio">
+science goals</a>. This concept, the so-called "universal cadence", will
+yield the main 20,000 square degree deep-wide-fast
+<a href="http://www.lsst.org/science/participate">
+survey</a> (typical single visit depth of r ~24.5)
+and use about 90% of the observing time. The remaining 10% of the time 
+will be used to obtain improved coverage of parameter space such as 
+ultra deep frequent observations, observations with very short revisit 
+times (~1 minute), and observations of "special" regions such as the 
+Ecliptic, Galactic plane, and the Large and Small Magellanic Clouds. 
+For example, fifty selected 10 square degree "deep drilling" fields could be
+covered with 40 hour-long sequences of 200 exposures each. Each 
+exposure in a sequence would have an equivalent 5-sigma depth of
+r~24, and each filter subsequence when coadded would be 2 magnitudes 
+deeper than the main survey visits (r~26.5). When all 40 sequences and 
+the main survey visits are coadded, they would extend the depth to r~28 AB mag. 
+
+</p>
+
+<HR id="q3" class="dec"> 
+<p class="q"><STRONG>Q: </STRONG>What does "Synoptic" mean?</p>
+<p class="a"><STRONG>A: </STRONG> 
+Our use of the word derives from the Greek word "Synopsis" and refers to
+looking at all aspects of something. In astronomy it often means looking at
+phenomena over time.
+The LSST is a synoptic survey in several ways: billions of objects will
+be imaged in six colors in an unprecedented large volume of our universe
+out beyond redshift 3 for galaxies. Several billion galaxies and ten billion
+stars will be cataloged.
+This survey over half the sky will also catalog changes in the intensity or
+color of these
+sources over a wide window from tens of seconds to years. Alerts will be
+produced
+within one minute of the event. </p>
+
+<HR id="q4" class="dec"> 
+<p class="q"><STRONG>Q: </STRONG>Why do we need the LSST?</p>
+<p class="a"><STRONG>A: </STRONG> 
+
+Until recently, most astronomical investigations have focused on small samples 
+of cosmic sources or individual objects. This is because our largest telescope 
+facilities typically had rather small fields of view, and those with large
+fields of view could not detect very faint sources. With all of our existing 
+telescope facilities, we have still surveyed only a minute volume of the 
+observable Universe. 
+Over the past two decades, however, advances in technology have made it possible
+to move beyond the traditional observational paradigm and to undertake large-scale 
+sky surveys. From its mountaintop <a href="http://www.lsst.org/lsst/gallery/site">site</a>
+in Chile, the LSST will image the entire visible sky every few nights,
+thus capturing changes and opening up the time-domain window over an
+unprecedented
+range of timescales for billions of faint objects. 
+Each sky patch will be visited 1000 times during the survey with a pair of
+exposures per visit. 
+The LSST data will enable 
+<a href="http://www.lsst.org/lsst/science/science_goals">qualitatively new
+science</a>.
+Billions of objects in our universe will be seen for the first time and
+monitored over time.
+Motivated by the evident scientific progress enabled by large sky surveys,
+multiple <a href="http://www.lsst.org/lsst/science/reports">national reports</a> have
+concluded that a dedicated ground-based wide-field imaging telescope with an
+effective aperture 
+of 6-8 meters is a high priority for astronomy, physics, and planetary science 
+over the next decade. 
+With a thousand-fold increase in survey power in time-volume space over 
+current facilities, LSST is likely to make unexpected discoveries. 
+</p>
+
+<HR id="q5" class="dec"> 
+<p class="q"><STRONG>Q: </STRONG> 
+Where does LSST rank among the many proposed national scientific facilities?</p>
+<p class="a"><STRONG>A: </STRONG> 
+
+Over the past decade six <a href="http://lsst.org/lsst/science/reports">national reports</a>
+have ranked LSST as a high priority.
+This is because LSST is uniquely capable of attacking some of the greatest
+mysteries
+in astronomy and physics.
+National committees studying options for the next generation facility
+have recommended LSST for its capability to study many fundamental questions
+in astronomy and physics all at the same time. Rather than building separate
+facilities to study near&#151;Earth asteroids, or the outer solar system,
+or how our galaxy was formed, or the nature of energetic explosions in the
+universe, or the mysterious dark matter and dark energy, LSST has a sufficient
+light grasp (throughput) to undertake all these scientific programs
+simultaneously
+from the same Wide&#151;Fast&#151;Deep survey. 
+</p>
+
+
+<HR id="q6" class="dec"> 
+<p class="q"><STRONG>Q: </STRONG>
+Why did you choose to build the telescope in Chile?
+</p>
+<p class="a"><STRONG>A: </STRONG> 
+
+The decision to place LSST on Cerro Pachon in Chile was made by an
+international site selection committee based on a competitive process that is
+<a href="http://www.lsst.org/lsst/site_selection">described here</a>.
+In short, modern telescopes are located in sparsely populated places (to avoid
+light pollution), at high altitudes and in dry climates (to avoid cloud cover).
+In addition to those physical concerns there are infrastructure issues such as
+existing facilities, bandwidth cost, and technical personnel. The
+best ten candidate sites in both hemispheres wordwide were studied by the site
+selection committee. Site image quality at Cerro Pachon is competitive with the
+best world-wide. 
+Cerro Pachon was the overall winner in terms of quality
+of the site for astronomical imaging and available infrastructure. The result
+will be superb deep images from the ultraviolet to near infrared over the
+vast panorama of the entire southern sky.
+</p>
+
+<HR id="q7" class="dec"> 
+<p class="q"><STRONG>Q: </STRONG>What is the LSST schedule and cost?</p>
+<p class="a"><STRONG>A: </STRONG> 
+The LSST is scheduled for first engineering light in 2014 and for early science
+operations beginning in 2015. Full science operations will begin in 2016.
+[Calendar years] The LSST project will cost $390M through first light,
+including all construction, hardware, software, data management, and a 30%
+contingency. [2006 $] This work-based cost estimate has remained constant
+within 15% since the beginning of the project phase in 2003. 
+Significant milestones have already been reached, including
+the <a href="http://www.lsst.org/lsst/gallery/mirror-casting">casting</a> of
+the <a href="http://www.lsst.org/lsst/gallery/camera/optical_design_drawing">primary/tertiary</a>
+
+<a href="http://www.lsst.org/lsst/science/highfire">mirror</a>. The LSST survey
+will last for ten years.
+</p>
+
+
+<HR id="q8" class="dec"> 
+<p class="q"><STRONG>Q: </STRONG>Who is involved with LSST?</p>
+<p class="a"><STRONG>A:</STRONG> 
+Click <a href="http://www.lsst.org/lsst/about/team">here</a> to
+meet the team and see a list of current institutional members. Over 100
+engineers and scientists are working on the LSST system.
+Many scientists are looking forward to LSST data. Some are already at work
+planning their research and interfacing with the LSST project scientists and engineers.
+Click <a href="http://www.lsst.org/lsst/about/team#science_collaborations">here</a> to
+see a list of the ten Science Collaborations. Over 250 scientists are involved
+in the LSST Science Collaborations currently, and the number is growing.
+Using the SDSS experience as a guide, it is expected that ultimately there will
+be thousands of papers published based on LSST data with over 5000 distinct
+authors.
+
+</p>
+
+<HR id="q9" class="dec"> 
+<p class="q"><STRONG>Q: </STRONG>Why build an entirely new telescope for this task?</p>
+<p class="a"><STRONG>A: </STRONG> 
+Because no existing telescope can do what the LSST will do.
+The LSST is different from other ground-based telescopes in that it is a large
+aperture wide-field
+survey telescope and camera that can move quickly around the sky tiling the sky
+with 15 second exposures: Wide-Fast-Deep. That combination is unique: wide field
+of view (10 square degrees), short exposures (pairs of 15-second exposures), and
+sensitive camera (24th magnitude single images, 27th magnitude stacked). LSST is
+far
+more than a telescope. With its 3200 Megapixel camera, supercomputer, and giant
+data
+processing, analysis, and distribution system, the LSST facility will produce an
+entirely new view of our universe enabling unforeseen explorations of discovery.
+When using telescope-camera combinations with smaller
+throughput, one must undertake different types of surveys in series. LSST will
+cross a 
+threshold where a single deep-wide-fast survey produces data for a wide range of
+studies.
+
+</p>
+
+<HR id="q10" class="dec"> 
+<p class="q"> <STRONG>Q: </STRONG>
+Why an 8.4 meter mirror with a 3.5 degree field? Couldn't a smaller
+telescope or an array of smaller telescopes do the same science in a
+somewhat longer time?</p>
+
+<p class="a"><STRONG>A: </STRONG> 
+Some of the science can't be done at all with a smaller telescope, or group of
+small telescopes. For instance, the near-Earth object (NEO) survey is looking for
+things that won't sit still for a long exposure. An exposure longer than 10 or 20 seconds
+becomes ineffective, and so finding the vast majority of NEOs which are small and faint
+requires a telescope that can collect a lot of light in 10 or 20 seconds. Similarly,
+longer exposures on a smaller telescope will not help characterize faint transient
+objects lasting only seconds. In an array of smaller telescopes, longer exposures would
+be required (to reach the sky-noise limit) as well as multiple Gigapixel cameras.
+<br>
+Some of the science can be done on a smaller telescope in a longer time, but
+consider the numbers: The speed with which you can survey an area of sky for objects of a
+given faintness is proportional to throughput (collecting area times field of view in
+meters squared degrees squared). The LSST enables totally new windows on the universe
+because it has such a high throughput, or "etendue." The etendue of LSST is 320 square
+meters square degrees. A primary mirror diameter of 8.4 m (effective aperture 6.7 m due 
+to obscuration) is the minimum diameter that simultaneously satisfies the depth 
+(24.5 mag depth per single visit and 27.5 mag for coadded depth) and cadence (revisit time 
+of 3-4 days, with 30 seconds per visit) constraints. Above a throughput or "etendue" of 
+200-300 square meters square degrees, many different surveys can be done using the same 
+wide-fast-deep survey data -- a large multiplex advantage.
+</p>
+
+<HR id="q11" class="dec"> 
+<p class="q"><STRONG>Q: </STRONG>Why not a space mission?</p>
+<p class="a"><STRONG>A: </STRONG> 
+There are several reasons why the science mission of LSST is most cost-effective
+with a ground facility. To probe the physics of dark energy, hemisphere coverage of the sky is necessary, as well as deep coverage. Some deep probes of the universe would benefit from the higher
+angular resolution available in space. But they also require huge samples of
+objects over a wide area of sky (large volume of the universe.) This Wide&#151;Deep
+capability is hard to obtain in space. Another reason is surveying for fast events --
+LSST will open this new window on the universe.
+In any realistic space mission the Wide-Fast-Deep capability would be lost:
+space telescopes have small collecting area compared to what can be built on the
+ground, leading to long exposures and loss of timing information. Since all LSST's
+science goals can be achieved from the ground, we must weigh the incremental benefit
+against the drawbacks. The science that drives the need for the LSST requires ultra deep
+and rapid wide&#151;field imaging at optical wavelengths&#151;a mission best
+achieved on the ground at a superb site. </p>
+
+<HR id="q12" class="dec"> 
+<p class="q"><STRONG>Q: </STRONG>
+What are the technology challenges and scale of effort?</p>
+<p class="a"><STRONG>A: </STRONG> 
+The realization of the LSST involves extraordinary engineering and 
+technological challenges: the fabrication of large, high-precision aspheric
+optics; construction of a huge, highly-integrated array of sensitive, wide-band 
+imaging sensors; and the operation of a data management facility 
+handling tens of terabytes of data each day. The design and development 
+effort includes structural, thermal, and optical analyses 
+of all key hardware subsystems, vendor interactions to determine 
+manufacturability, explicit prototyping of high-risk elements, prototyping 
+and development of data management systems, and extensive systems engineering 
+studies. To validate system performance, full end-to-end simulations are being
+done. Over 100 technical personnel at a range of institutions are currently 
+engaged in this program. 
+</p>
+
+<HR id="q13" class="dec"> 
+<p class="q"><STRONG>Q: </STRONG>How does LSST probe the physics of dark energy?</p>
+<p class="a"><STRONG>A:</STRONG> 
+
+Current observations suggest that most of the energy density of the universe is
+in some unknown form. Dark energy affects the cosmic history 
+of both the Hubble expansion and mass clustering. If combined, different types
+of probes of the expansion history and structure history can lead to tight
+constraints dark energy equation of state and other cosmological parameters. These tight
+constraints arise because each technique depends on the cosmological parameters or errors in
+different ways. A unique aspect of LSST as a probe of dark energy and matter is the use
+of multiple cross-checking probes that reach unprecedented precision. 
+These probes include weak gravitational lens (WL) cosmic shear, baryon 
+acoustic oscillations (BAO), supernovae, and cluster counting -- all as a
+function of 
+redshift. Using the cosmic microwave background as normalization, the
+combination 
+of these probes can yield the needed precision to distinguish between models of
+dark 
+energy. In addition, time-resolved strong galaxy and cluster 
+lensing probes the physics of dark matter. <br>
+LSST data could lead to a hundred- to thousand-fold increase in precision over
+precursor experiments about to be undertaken.
+The power and accuracy of LSST dark energy and dark matter probes is derived 
+from samples of several billion galaxies and tens of millions of Type-I
+supernovae. The nominal high-SNR sample defined by i<25 mag (SNR>25 for point
+sources) will include four billion galaxies (55 per suare arcminute) with the
+mean 
+photometric redshift accuracy of 1-2% (relative error for 1+z), and with 
+only 10% of the sample with errors larger than 4%. The median redshift for 
+this sample will be z=1.2, with the third quartile at z=2. For a 
+subsample of 2 billion galaxies further constrained by flux limits in the 
+g and z bands, the photometric redshift errors will be two to three times 
+smaller. By simultaneously measuring mass growth (via weak lensing and cluster
+counting) and curvature (via BAO and SN), LSST data will tell us whether the recent cosmic
+acceleration is due to dark energy or modified gravity. 
+</p>
+
+<HR id="q14" class="dec"> 
+<p class="q"><STRONG>Q: </STRONG>
+Why do you need such accurate measurements of the shear power spectrum?</p>
+<p class="a"><STRONG>A: </STRONG> 
+Outside of the huge and rare mass overdensities of rich clusters of galaxies,
+the mass contrast is much lower, giving rise to shear values below one
+percent. Here, in the vast volume between the rich clusters, is where most of the dark
+matter and dark energy of the universe exists. Current observations
+suggest that most of the energy density of the universe is in some unknown
+form. Weak gravitational lens "cosmic shear" as a function of distance
+will measure both the geometry of the
+universe and the growth rate of structure&#151;two related probes of the
+equation of state of this dark energy. It is necessary to measure the weak
+gravitational lens induced shear of billions of galaxies over a large area
+and control systematic shear errors at the 0.0001 level.
+</p>
+
+<HR id="q15" class="dec"> 
+<p class="q"><STRONG>Q: </STRONG>
+Will it be possible to subscribe to real time alerts of LSST discoveries? </p>
+<p class="a"><STRONG>A: </STRONG> 
+Yes. Web alert pages and auto email alert services enabled by our data centers
+via the Virtual Observatory will permit users to custom filter alerts based on
+a number of classification parameters. About 2 billion objects 
+will be routinely monitored for photometric and astrometric changes, and any 
+transient events will be posted in less than 60 seconds 
+(with a goal of 30 seconds) via web portals including the Virtual Observatory. 
+</p>
+
+<HR id="q16" class="dec"> 
+<p class="q"><STRONG>Q: </STRONG> Will the full resolution, 
+full depth image data be available to download? </p>
+<p class="a"><STRONG>A: </STRONG> 
+
+Yes. There will be a range of data products and download portals. 
+The LSST data system is being designed to enable as wide a range of science as 
+possible. Standard data products, including calibrated images and catalogs of
+detected objects and their attributes, will be provided both for individual 
+exposures and the deep incremental data coaddition. 
+For the "static" sky, there will be yearly database releases listing many 
+attributes for billions of objects. This database will grow in size to about 
+30 PB and about 20 billion objects. 
+<br>
+As in the SDSS, we expect a power law of user interactions with the data.
+At one end of this distribution are simple lookup queries or color jpeg cutout
+downloads.
+At the other end are huge statistical calculations over the entire database, and
+image 
+operation scripts on billions of objects. The data management system is
+budgeted to 
+handle most but not all of that distribution. 
+Institutions joining LSST early, and members of the LSST Science Collaborations,
+will have the customary advantage of deep familiarity
+with the LSST system and survey. 
+</p>
+
+
+<HR id="q17" class="dec"> 
+<p class="q"><STRONG>Q: </STRONG>
+Will LSST imaging data be available world-wide for scientific use?</p>
+<p class="a"><STRONG>A:</STRONG> 
+Our goal is open-source, open-data. 
+Currently US federal agencies and foundations support LSST R&D, and the
+LSST construction proposal is to a US agency.
+However, we would like to make the LSST scientific data available world-wide.
+To realize this goal, we are working with foreign institutions and
+governments to share the costs. The ten LSST science collaborations
+are open to all US scientists, and hopefully soon to an increasing number
+of scientists in other countries. <br>
+Our ultimate goal is world pubic data, but this will not be feasible without
+early investment
+by foreign consortia. US federal agencies will shoulder the brunt of the cost
+of 
+construction and the Data Management system is budgeted to serve the US
+community.
+Institutions joining LSST early will have the customary advantage of deep
+familiarity
+with the LSST system and survey. Early collaboration by institutions worldwide
+will also 
+assure access to additional local compuational capability to efficiently search
+and run 
+scripts on the 30PB database and undertake calculations on the 100PB of images.
+
+</p>
+
+<HR id="q18" class="dec"> 
+<p class="q"><STRONG>Q: </STRONG>What are the data management challenges?</p>
+<p class="a"><STRONG>A: </STRONG> 
+The rapid cadence of the LSST observing program will produce about 30 TB per
+night, leading to a total database over the ten years of operations of 60 PB for the
+raw data, and 30 PB for the catalog database. 
+The total data volume after processing will be several hundred PB, processed
+using 100 TFlops of computing power. Processing 
+such a large volume of data, converting the raw images into a faithful
+representation of the universe, automated data quality assessment, and 
+archiving the results in useful form for a broad community of users is a 
+major challenge.
+There will be both mountain summit and base computing 
+facilities, as well as a central archive facility and multiple data access 
+centers. The data will be sent over existing optical fiber 
+links from South America to the U.S.
+Although the data processing center will have substantial computing power (about
+100 TFlops), current trends suggest that it will 
+not even qualify for the top 500 list by the time of first light in 2014.
+Hence, while LSST is making a novel use of advances in information technology, 
+it is not taking the risk of pushing the expected technology to the limit. 
+</p>
+
+
+<HR id="q19" class="dec"> 
+<p class="q"><STRONG>Q: </STRONG>
+I have questions. I'd like to make a scientific contribution to this
+project. Who should I contact?
+</p>
+
+<p class="a"><STRONG>A: </STRONG> 
+You can contact us by emailing to "<i>contact</i>" at"<i>lsst.org</i>". 
+The LSST Project <a href="http://www.lsst.org/lsst/science/participate">
+solicits your input</a> on the technical and scientific choices that we face. 
+<a href="http://lsst.org/lsst/about/contact_us">Share your views with us!</a>
+Please make specific reference to technical documents or presentations
+when appropriate, so we can be sure to route your comments to the
+relevant people. A good place to start is our 
+<A HREF="http://lsst.org/lsst/science/Overview/">overview paper</A>.
+Consider also browsing our
+<a href="http://lsst.org/lsst/about/team">team page</a>. <br>
+
+The best way to take advantage of the unique science opportunities is to
+participate in the LSST Science Collaborations and/or the project itself. Early participation
+assures that you will have the necessary familiarity with the details of the entire system
+and operations.  Institutions wishing to join LSST should contact LSST Corporation.
+Institutional membership assures early access to and familiarity with the system
+and survey. Individual scientists may join one of the ten LSST Science Collaborations in two
+ways: (1) scientists at LSST member institutions can automatically join at any time
+without review; (2) other scientists may apply for membership during the yearly open 
+competitive applications periods which are announced widely. For details see the
+<a href="http://www.noao.edu/lsst/collab_prop/Scicollab.htm">science collaboration site</A>. 
+</p></div>
+
+
+</div>
+ <!--#include virtual="/footer.html" -->
+
+</body>
+</html>

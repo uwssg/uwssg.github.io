@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>LSST&#8212;Home</title>
+	<link rel="stylesheet" href="../../css/lsst-mitigation.css" />
+	<link rel="stylesheet" href="../../css/lsst-nav.css" />
+</head>
+<body id="press" class="press two-col ">
+
+<!--#include virtual="/header.html" -->
+
+
+<div id="content">
+
+<h4> Initial Image Simulation Data </h4>
+<p>
+
+The directories linked below contain a series of test images. These
+images were developed for the purpose of testing the Data Management
+pipelines for data challenge DC3a. They are not intended to be
+representative of the final LSST system but to enable the development
+of analysis tools for working with the LSST data. The parameterization of
+the images was designed to test the capabilities of the analysis
+pipelines to a range of observing conditions. This includes varying
+the PSF of the images from 0.4 to 1.8 arcseconds, changing the airmass
+from 1.0 to 2.0, implementing two sky background mode with low (new
+moon) and high (full moon and 20 degrees from the Moon) counts and
+varying the mirror and optics specifications (including
+aberrations). The images currently available represent 1% of the
+completed data set and are available for evaluation. The file <a
+href="dc3.txt">dc3.txt</a> lists the parameters used to define these
+images including, seeing, airmass, position of CCD in the focal plane,
+background sky. For access to the full simulation data contact <a
+href="mailto:ajc@astro.washington.edu"> Andrew Connolly. </a> <p>
+
+
+For the full data sample: Deep contains 96 images of the same field
+(with varying seeing, airmass and backgrounds) for use in image
+stacks, Ideal contains a simulation with no atmosphere, no optical
+distortions, airmass of unity, 0.1 arcsec seeing and not sky
+background (this defines an idealized view of the sky for use as a
+truth table) and Wide contains 163 pointings which sample the focal
+plane of the LSST telescope for a range of airmasses and seeing
+values.  <br> <br>
+
+</div>
+
+<!--#include virtual="/footer.html" -->
+
+</body>
+</html>

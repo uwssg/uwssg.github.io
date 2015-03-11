@@ -1,0 +1,37 @@
+<div id="sidebar">
+ <ul>
+  <li class="thissection">This Section</li>
+  <li><a href="research.shtml">Research Home</a></li>
+  <li><a href="research.shtml?research/flickr">Flickr & Google Sky</a></li>
+ <li><a href="research.shtml?research/geocode">The Sky Right Now</a></li>
+  <!--
+  <li><a href="research.shtml?research/galaxies">Galaxy Pages</a></li>
+  <li><a href="research.shtml?research/movingObjects">Solar System
+ Pages</a></li>
+  <li><a href="research.shtml?research/variableStars">Variable Stars
+ Pages</a></li>
+  <li><a href="research.shtml?research/transients">Transients Pages</a></li>
+  <li><a href="research.shtml?research/CluE1">Scalable Science Pages</a></li>
+  <li><a href="research.shtml?research/software">Software Pages</a></li>
+  -->
+ </ul>
+</div>
+
+<h1>Gadget Examples: Query & Visualizations</h1>
+<br>
+<p>
+Filter for specific targets of your choice! Type your SQL query into the 'Query String' box. The SQL query example  below returns u-g, g-r, r-i, i-z data from SDSS within the RA and DEC bounds specified: <br><br>
+
+SELECT TOP 500 objid,specObjId,ra,dec,modelMag_g,(modelMag_u - modelMag_g) AS u_g,(modelMag_g - modelMag_r) AS g_r,(modelMag_r - modelMag_i) AS r_i,(modelMag_i - modelMag_z) AS i_z FROM PhotoPrimary WHERE ra BETWEEN 166.5929564485714 AND 166.73451585376313 AND dec BETWEEN 24.92361956464075 AND 25.076380435359255 AND modelMag_g > -9999 ORDER BY modelMag_g ASC
+
+<br>
+<br>
+Using the 3 plotters, select the data you want to visualize from the dataset returned from your query. You could choose to  plot u_g vs g_r, g_r vs. r_i, and r_i vs i_z to see how your objects look in various color-color spaces.
+
+</p>
+<br>
+<iframe src="http://sky.astro.washington.edu:8081/ascot/qsodemo.html" width="900" height="1500" scrolling="no" frameborder="0"></iframe>
+
+
+
+

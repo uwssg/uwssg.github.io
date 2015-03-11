@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>LSST&#8212;Home</title>
+
+        <script type="text/javascript"></script>
+
+        <style type="text/css" media="all">
+                @import "../../css/uwssg_v2.css";
+        </style>
+
+
+</head>
+<body id="home" class="two-col ">
+
+<!--#include virtual="../../header_lsst.shtml" -->
+
+<div id="content">
+
+
+<h2>The LSST Image Simulation Group</h2>
+
+<div id="movie">
+  <a href="images/ImageSimColorLarge.jpg">
+  	<img src="images/ImageSimNoBackgroundBrightSmall.png" width="320"/>
+  </a>
+</div>
+
+
+<h3>WIDE</h3>
+
+<p> Simulating a large aperture, wide field survey telescope with a
+3.2 Gpixel camera
+</p>
+
+<h3>FAST</h3>
+
+<p> For each LSST pointing, ray-tracing over 10<sup>11</sup> photons
+through a multi-layer atmosphere, through the telescope and camera
+optics (including aberrations) and simulating the conversion of these
+photons within the detector.
+</p>
+
+<h3>DEEP</h3>
+
+<p> A simulated sky down to r=28 with stars and galaxies for static,
+variable and moving sources with a realistic spatially variable PSF, a
+variable sky background, and including airmass and chromatic effects.
+
+</p>
+
+</p>
+
+</div>
+
+<!--#include virtual="footer.html" -->
+
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+<div id="sidebar">
+ <ul>
+  <li class="thissection">This Section</li>
+  <li><a href="clue.shtml?clue/CluE1">CluE Overview</a></li>
+  <li><a href="clue.shtml?clue/CluE2">CluE at UW</a></li>
+  <li><a href="clue.shtml?clue/CluE3">CluE People</a></li>
+  <li><a href="clue.shtml?clue/CluE4">Publications</a></li>
+  <li class="thispage">This Page</li>
+  <li><a href="#cloud">The Cloud</a></li>
+  <li><a href="#current">Current Research</a></li>
+ </ul>
+</div>
+<!--
+<div id="quickSummary">
+<h3> Cluster Exploration (CluE) </h3>
+
+</div>
+-->
+<h1><a href="http://www.nsf.gov/awardsearch/showAward.do?AwardNumber=0844580"> Putting Astronomy's Head in the Cloud</a></h1>
+<div id="figurel">
+<img src="images/ImageSimNoBackgroundBrightSmall.png" width="200" border="0" alt="Image Sim"><br>
+</div>
+<p>
+
+Astrophysics is addressing many fundamental questions about the nature
+of the universe through a series of ambitious wide-field optical and
+infrared imaging surveys (e.g. studying the properties of dark matter
+and the nature of dark energy). To accomplish these goals requires new
+methodologies for analyzing and understanding petascale data sets
+(with the data being collected at a rate 1000x greater than current
+surveys). This research focuses on exploring an emerging paradigm for
+data intensive applications, map-reduce (using Hadoop for the
+implementation of map-reduce), and how it scales to the analysis of
+astronomical images. The work is addressing the efficiency of
+map-reduce for determining spatial and temporal overlaps between
+terabyte scale imaging data sets when compared to standard database
+techniques. We are delivering new algorithms for indexing, accessing
+and analyzing astronomical images using map-reduce that can balance
+the load between the compute nodes on distributed systems. We are also
+delivering applications that will analyze the spatial distribution of
+star formation within galaxies (combining large multispectral data
+sets) and for identifying asteroids within a time series of data where
+the asteroid may be below the detection threshold of any one
+image. 
+</p>
+
+<p>
+Cloud computing has revolutionized the way businesses use
+computers. One of its impacts has been the ability of users to
+simultaneously access, on demand, a high number of compute nodes and
+large amounts of storage. Cloud computing also allows providers to
+offer clients abstract compute capabilities as a service.  These
+abstractions can be raw infrastructure, software development
+platforms, or fully-developed software applications. The idea is that
+the user can interact with the cloud in the manner that best suits
+their needs, concentrating only what is necessary for their own
+productivity and leaving the resource and/or software management tasks
+to the cloud provider.
+</p>
+
+<p>
+Software development platforms have emerged in order to take advantage
+of this new computing paradigm (so-called "Platform as a Service" or
+"PaaS"). Once such platform is "MapReduce," which allows the
+programmer, by obeying the MapReduce API, to write efficient parallel
+programs with less effort than existing parallelization strategies.
+The Cluster Exploration (<a
+href="http://www.nsf.gov/cise/clue/index.jsp">CluE</a>) initiative is
+a joint effort between NSF, Google, and IBM to allow academics to
+access a cloud-like MapReduce platform.
+</p>
+<div id="figurer">
+<img src="images/Telescope_Side_2-470.jpg" width="250" border="0"
+alt="Image Sim"><br> <div id="mycaption">Courtesy of LSST Corp.</div>
+</div>
+
+<a name="cloud"></a>
+<h2>MapReduce in Astronomy</h2>
+<p>
+
+In order to exploit the elastic nature of the computational cloud,
+where many computers can be used at the same time, one requires an
+efficient way of writing parallel programs.  The high performance
+computing ("HPC") community has been developing such programs for
+roughly 20 years. However, existing HPC tools are either too
+restrictive for many applications (e.g., parallel languages like
+Co-Array Fortran or Unified Parallel C) or too complex and time
+consuming to develop scalable programs in (e.g. message passing
+libraries). Enter <a
+href="http://labs.google.com/papers/mapreduce.html">MapReduce</a>.
+The MapReduce model allows programmers to write a <i>map</i> function
+which takes a key/value pair (e.g. id and filename), operates on it
+(performs object detection) and returns a new set of key/value pairs
+(source list).  The <i>reduce</i> function then aggregates/merges all
+the intermediate data (builds an object catalog on a stacked source
+list).  Many problems in astronomy naturally fall into this model
+because of the inherent parallelizability of many astronomical
+tasks. The benefits are that MapReduce is easy to write and the
+framework provides automatic load balancing.
+</p>
+
+<a name="current"></a>
+<h2>Our Current Research</h2>
+
+<p>You can <a href="clue.shtml?clue/CluE2"> read </a> about on ongoing
+research efforts related to the cloud throughout the SSG pages. Our
+current research has focused on two areas: mosaicing astronomical
+images and simulating photons passing through the atmosphere,
+telescope and camera to generate images that the next generation of
+astronomical surveys will produce.
+</p>
+
+<div id="figurel">
+<img src="clue/images/mosaic.png" width="250" border="0" alt="mosaic"><br>
+</div>
+<p>
+Image mosaicing is a general tool required by Astronomers. The <a
+href="http://www.sdss.org"> Sloan Digital Sky Survey (SDSS) </a> alone
+generated 1.3 million astronomical images. Combining these files to
+form larger composite images or to stack the individual images to
+detect faint sources enables a broad range of science questions to be
+detected (from the detection of moving asteroids that are too faint to
+be seen on a single image to the identification of very faint,
+high-redshift galaxies). We have implemented a mosaicing tool under
+Hadoop that operates on the SDSS "Stripe 82" images (a 300 sq degree
+area of the sky that has been imaged more than 85 times over the
+period of 10 years). In the map-reduce application each image is
+registered and warped to a common reference frame and then coadded to
+form a deep registered final image.</p>
+
+<p> 
+
+Next generation astronomical surveys such as the LSST will generate
+30TB of images per night; detecting transient sources, moving objects
+and hundreds of millions of stars and galaxies. To understand the
+properties of the LSST system and to determine how well we can recover
+the cosmological parameters that describe our universe we simulated
+what the LSST is expected to see. We do this be generating photons
+from astronomical sources that are then ray-traced through an
+atmosphere, telescope and camera to produce images as shown in the
+Figure at the top of the page. As each of the photons is a serial
+event this has several interesting properties for the optimization and
+parallelization of a Hadoop application. The finest level of
+granularity for parallelism is at the photon level and the coarsest a
+full CCD image. Setup time and shutdown time of a mapper (3 minutes)
+means that photon level parallelism is overhead dominated. CCD-level
+optimization results in run times that are dominated by very bright
+sources (i.e. stars with r<15th magnitude). We are exploring a range
+of optimization levels as part of this work including packaging
+photons, simulating sampled images, and reconstruction of the full
+image at the reducer stage.

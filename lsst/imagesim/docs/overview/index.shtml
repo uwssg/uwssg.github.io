@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>LSST&#8212;Home</title>
+	<link rel="stylesheet" href="../../css/lsst-mitigation.css" />
+	<link rel="stylesheet" href="../../css/lsst-nav.css" />
+</head>
+<body id="science" class="two-col science">
+
+<!--#include virtual="/header.html" -->
+
+
+<div id="content">
+
+<p>
+
+<h4> Documentation for the Image Simulations </h4>
+
+The initial set of images for the LSST have been generated for the
+LSST Data Management group (for Data Challenge DC3a). These images and
+catalogs simulate an r=28 universe as seen through a 15 second LSST
+exposure. The details of the DC3a data run, the underlying
+simulations, and additional documentation about the simulations can be
+found below. The formats for the output catalogs and images can be found <a href="../format"> here</a>.
+
+<ul>
+
+<li> The requirements document for the LSST DC3a Data Challenge that
+drove the development of the initial simulated data sets can be found
+<a href="ImageSim_DC3_v9.pdf">here</a>.
+
+<li> Details of the physics underlying the image simulation are
+available as a short <a href="detf_lsst.pdf">paper</a> prepared for
+the Dark Energy Task Force </li>
+
+<li> A <a
+href="http://www.lsst.org/files/docs/aas/2009/Jernigan_460-25_Jan09_Final2.pdf">
+poster</a> on the image simulation framework was presented at the
+213th Meeting of the American Astronomical Society </li>
+
+<li> More details on the simulation of PSF ellipticities and
+evaluation of the focal plane design can be found in the following <a
+href="http://www.lsst.org/files/docs/aas/2009/jee_460.26_jan09.pdf">
+poster</a> presented at the 213th Meeting of the American Astronomical
+Society </li>
+
+</div>
+
+<!--#include virtual="/footer.html" -->
+
+</body>
+</html>

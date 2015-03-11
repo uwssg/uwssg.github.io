@@ -1,0 +1,62 @@
+<div id="sidebar">
+ <ul>
+  <li class="thissection">This Section</li>
+  <li><a href="research.shtml">Research Home</a></li>
+  <li><a href="research.shtml?research/galaxies">Galaxy Pages</a></li>
+  <li><a href="research.shtml?research/movingObjects">Solar System
+ Pages</a></li>
+  <li><a href="research.shtml?research/variableStars">Variable Stars
+ Pages</a></li>
+  <li><a href="research.shtml?research/transients">Transients Pages</a></li>
+  <li><a href="research.shtml?research/CluE1">Scalable Science Pages</a></li>
+  <li><a href="research.shtml?research/software">Software Pages</a></li>
+ </ul>
+</div>
+
+<h1>SSG Software</h1>
+
+<h3>Locally Linear Embedding</h3>
+<br>
+
+
+<div id="figurer">
+<img src="research/figures/lle.png" width="300" border="0" 
+alt="[LLE figure]"><br/>
+<div id="mycaptionfigr">LLE on SDSS spectra</div>
+</div>
+<p>Author: Jake VanderPlas</p>
+<p>Download: DimReduce version 3.1 (<a href="research/software/DimReduce_v3.1.tgz">tgz file</a>)</p>
+<p>About: DimReduce is a C++ package for performing nonlinear dimensionality 
+reduction of very large datasets 
+with <a href="http://www.cs.toronto.edu/~roweis/lle/">Locally Linear 
+Embedding</a> (LLE) and its variants.  DimReduce 
+is built for speed, using the optimized linear algebra packages 
+<a href="http://www.netlib.org/blas/">BLAS</a>, 
+<a href="http://www.netlib.org/lapack/">LAPACK</a>,
+and <a href="http://www.caam.rice.edu/software/ARPACK/">ARPACK</a>.
+Because of the need for storing very large matrices (1000 by 10000, for
+our SDSS LLE work), DimReduce is designed to use binary FITS files as
+inputs and outputs.  This means that using the code is a bit more
+cumbersome.  For smaller-scale LLE, where speed of computation is not as
+much of an issue, the <a href="http://mdp-toolkit.sourceforge.net/">
+Modular Data Processing toolkit</a> may be a better choice.  It is a 
+python toolkit with some LLE functionality, which VanderPlas contributed.
+</p>
+<p>
+If you find this software useful in your research please reference 
+VanderPlas, J. and Connolly, A.J. "Reducing the Dimensionality of Data: 
+Locally Linear Embedding of Sloan Galaxy Spectra", 2009, AJ (submitted) 
+<a href="http://adsabs.harvard.edu/abs/2009arXiv0907.2238V">(ADS link)</a>
+</p>
+
+
+
+<h3>eLSST Software</h3>
+
+<p>
+<i>Note: Much of this software is for internal use, and is 
+password protected</i>.  </p>
+<p>
+eLSST software page can be found 
+<a href="elsst/tools.shtml">here</a>.
+</p>

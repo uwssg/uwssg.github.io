@@ -1,2 +1,2 @@
-# ssg.github.io
-SSG Webpages
+# uwssg.github.io
+UW SSG Webpages

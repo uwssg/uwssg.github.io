@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>LSST&#8212;Home</title>
+	<link rel="stylesheet" href="/css/lsst-mitigation.css" />
+	<link rel="stylesheet" href="/css/lsst-nav.css" />
+</head>
+<body id="public" class="public two-col ">
+
+<!--#include virtual="/header.html" -->
+
+<div id="content">
+<p>
+
+<h4> Simulating Focal Plane </h4>
+
+The focal plane of the LSST will be tiled with 189 4Kx4K CCDs, whose
+worst case heights will vary less than 10 &mu m (peak-to-valley) but
+in a complicated way relative to the nominal flat surface. Although
+this flatness deviation is small compared with other cameras, the
+small f-ratio of the LSST optics makes this focal plane flatness
+variation play a critical role in aberration-induced PSF
+elongation. Through the image simulation group we can simulate the
+impact of the resulting PSF on LSST science.<p>
+
+<a name="fig1"></a>
+<center>
+  <img src="images/focalplane.jpg" width=300> 
+</center><p>
+
+Figure 1 shows the distribution of Chip heights for the 189 CCDs in
+the focal plane (we assume worst case height variations of 10 &mu m, tilts of
+2.5x10<sup>-4</sup> radians and a "potato chip" surface variation of 5
+&mu m). From this we simulate the variation in the PSF elipticity as a
+function of postion on the focal plane. <a href="#fig2"> Figure 2 </a>
+shows the resulting ellipticities superimposed on the focal pane
+(after accounting for the atmosphere, telescope and CCD height and
+shape variations). As expected, we observe sharp discontinuities in
+PSF pattern across chip gaps, where abrupt changes in focus can
+happen. The overall shape of the variations is, however, stable and can be
+modelled with a spatially variable PSF.
+
+<a name="fig2"></a>
+<center>
+<img src="images/whiskeroverchip.jpg" width=300> 
+
+<img src="images/whiskeroverchip_resi.jpg" width=300> <p> 
+
+Figure 2: A comparison of the PSF induce ellipticities due to the
+variation in the CCD heights, tilts and shapes. The right panel shows
+the resulting residuals once the PSF has been modelled using a
+Principal Component Analysis
+</center>
+
+Using a chip-by-chip PSF interpolation with basis functions derived
+from a Principal Component Analysis <a href="#fig3"> Figure 3 </a>, we
+can model and the spatial variation in the PSF and also the
+discontinuities from chip-to-chip. Removing these discontinuities (see
+the right panel of <a href="#fig2"> Figure 2 </a>) results in
+residuals in the ellipticites and galaxy shear errors that are well
+below that required for precision weak lensing for the LSST survey. (
+~0.01% in the PSF ellipticity measurements). Our image simulation
+shows that this remarkable accuracy in the PSF modelling allows us to
+keep the background noise in the two-point shear measurement at
+~10<sup>-6</sup> or below in a single 10 sq. deg field. We expect that
+this noise floor will decrease linearly with the survey area until we
+reach the hard limit set by the PSF correction accuracy. A full-scale
+20,000 sq. degree simulation is on-going, and a more robust
+PSF-correction (apart from PSF modelling) algorithm is under
+development. Details of this analysis can be found <a
+href="http://www.lsst.org/files/docs/aas/2009/jee_460.26_jan09.pdf">
+here </a> together with further information on the LSST presented at
+the <a href="http://www.lsst.org/lsst/news/aas_213"> 213th Meeting of
+the American Astronomical Society</a>
+
+<a name="fig3"></a> <center> <img src="images/pca.jpg" width=300> <p>
+Figure 3: The basis functions associated with the variation in
+ellipicity of the PSF due to differences in chip-to-chip heights,
+tilts and shapes.  </center>
+
+</div>
+
+<!--#include virtual="/footer.html" -->
+
+</body>
+</html>

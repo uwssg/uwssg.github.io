@@ -1,0 +1,338 @@
+<div id="sidebar">
+ <ul>
+  <li class="thissection">This Section</li>
+  <li><a href="clue.shtml?clue/CluE1">CluE Overview</a></li>
+  <li><a href="clue.shtml?clue/CluE2">CluE at UW</a></li>
+  <li><a href="clue.shtml?clue/CluE3">CluE People</a></li>
+  <li><a href="clue.shtml?clue/CluE4">Publications</a></li>
+  <li class="thispage">This Page</li>
+  <li><a href="#mapreduce">Map-Reduce Framework</a></li>
+  <li><a href="#footprint">Footprint Problem</a></li>
+  <li><a href="#pixelz">Pixel-z</a></li>
+  <li><a href="#movingobjects">Moving Objects</a></li>
+ </ul>
+</div>
+<h1>Viewing the heavens through the Cloud</h1>
+The University of Washington is taking a leading role
+in exploring the impact of cloud computing on astronomical 
+research.  Through the CluE initiative, we will examine several
+astronomy use cases.
+<h2>Goals</h2><a name="goals"></a>
+<ul>
+  <li>Use Hadoop to develop an image analysis framework for spectral
+  and temporal analysis of massive image data sets.</li>
+  <li>Test the efficiency of map-reduce for determining spatial and
+  temporal overlaps between Terabyte scale imaging data sets when
+  compared to standard database techniques.</li>
+  <li>Develop tree structures for maximizing spatial search efficiency
+  and load balancing.</li>
+  <li>Apply this analysis framework to a set of massive
+  astronomical data sets to consider the spatial distribution of star
+  formation within resolved galaxies and to search for sources within
+  the outer Solar System that cannot be detected on a single image.</li>
+</ul>
+<a name="mapreduce"></a>
+<h2>The Map-Reduce Framework</h2>
+<div id="figurer">
+<img src="http://hadoop.apache.org/core/images/architecture.gif" width="250" border="0" alt="">
+<div id="mycaption"><a href="http://hadoop.apache.org/core/">Courtesy Hadoop Core</a></div>
+</div>
+<p>
+<a href="http://labs.google.com/papers/mapreduce.html"> Map-reduce</a>
+is a programming model developed by Google
+for processing extremely large datasets in a scalability parallel manner.
+Programs written in its functional style are automatically
+parallelized and executed on Google's large clusters of commodity
+machines.  For this project, we will be using map-reduce's open-source
+implementation, Hadoop, which is freely available and is implemented
+in a generalized and flexible manner such that it can even be run
+within batch jobs on existing shared cluster resources, like the HPC
+platforms offered by NASA, NSF, and DOE.  For most purposes of
+discussion, ``Hadoop'' and ``map-reduce'' are essentially
+interchangeable.  We will reference ``map-reduce'' as the generic
+paradigm and ``Hadoop'' as the specific implementation.
+</p>
+<p>
+The map-reduce model specifies a computation that takes a set of input
+key/value pairs and produces a set of output values.  For the
+purposes of our study, the computation can divided into 3 distinct
+phases: <b>Map</b>, <b>Shuffle</b>, and <b>Reduce</b>, each of which are
+written by the user.  <b>Shuffle</b> is an optional
+capability of the <b>Reduce</b> mechanism, but since we make heavy
+use of it, we will therefore consider it a unique phase.  <b>Map</b> takes an input pair and ``emits'' a set of intermediate
+key/value pairs.  These intermediate pairs are then <b>Shuffled</b>
+among processors by means of a user-supplied partitioning function.
+The <b>Reduce</b> method then operates on the shuffled key/value pairs,
+and returns a (usually smaller) set of values. The key to enforcing
+scalability in the map-reduce paradigm is that user-supplied methods
+in each phase can only see local data.  Data is transmitted
+among compute nodes only between phases.
+</p>
+<p>
+Why might map-reduce/Hadoop be useful to astronomers?  Map-reduce is an
+example of a tool built to do one thing, but to do that one thing
+extremely well.  If one can cast one's algorithm into a map-reduce
+friendly fashion, one has the opportunity to leverage an extremely
+scalable, economical, efficient, and reliable tool. Map-reduce
+applications can usually scale to thousands of compute nodes, where
+these nodes can be cheap commodity hardware with inexpensive
+locally-attached storage.  Each of the <b>Map</b>, <b>Reduce</b> and
+<b> Shuffle</b> methods are written in a serial fashion.
+This means that the learning
+curve for scaling a serial application to run on a massively parallel
+system is much shallower than classical parallel applications and that
+the development time for applications is much shorter (enabling rapid
+discovery in data streams).  Scalability is achieved by the high
+efficiency by which Hadoop can sort key/value pairs across nodes.
+</p>
+<a name="footprint"></a>
+<h2>The Footprint Problem</h2>
+<p>
+A generic problem in astronomy is the so called "Footprint Problem."  Many applications
+require a set of images from several heterogeneous sources be sub-sectioned and reprojected
+onto a common grid and bounding box.
+<ol>
+<li>Find all images that overlap a given point (or region).</li>
+<li>Warp and sub-section.</li>
+</ol>
+</p>
+
+<p>
+In its most naive implementation the footprint matching is simply a nearest neighbor search where the key 
+is the input object and the set of values associated with that key are the union of images that intersect 
+with the input image. In a map-reduce framework we would simply map all input images (for which we wish to 
+determine the overlap) to all images within the data set. The shuffle process would then move all pairs 
+with the identical keys to the same machine and the reduce function would combine all key-value pairs 
+(returning the list of all images that overlap the input). While we would implement this as a benchmark 
+application such an approach is clearly inefficient (scaling as O(N<Sup>2</Sup>)) as it does not make use 
+of the inherent clustering of the images on the sky.
+</p>
+<div id="figurec">
+<img src="images/STOMP_hdf_small.png" width="400px" border="0" alt="">
+<div id="mycaption">Courtesy R. Scranton</div>
+</div>
+<p>
+The use of trees, however, provides the flexibility for partitioning data that are distributed in a many-dimensional 
+parameter space such that spatially proximate elements are also kept &ldquo;closer&rdquo; to one another in 
+terms of memory access times. Not only are they a convenient way of partitioning a data set that is too large to fit 
+in any single node&rsquo;s memory, but the partitioning scheme can also be modified to take load balancing concerns 
+into consideration. Trees have been implemented in many parallel architectures and scale efficiently to large 
+numbers of processors.  Standard parallel implementations, however, 
+were designed presuming a shared memory architecture or a low-latency message passing layer. Investigating the 
+implementation of trees that work in the spatial, frequency and temporal domain within the Hadoop framework is, 
+therefore, fundamentally valuable across many scientific disciplines. Our initial goal is to explore how best 
+to design and implement trees in Hadoop such that scientific image analysis is as efficient and straightforward as possible. 
+</p>
+<p>
+<a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4118757">Liu, Rosenberg and Rowley</a> introduce a mechanism
+by which trees can be built on large numbers of images.  The starting point will involve partitioning the data such that a subset will
+fit in memory on one node.  A tree will be built on this sub sample and will be used as a "Parent Tree" for partitioning the remainder
+of the data to individual nodes on which the rest of the tree will be built.  The procedure is summarized in the following
+Map, Shuffle, Reduce flows.
+</p>
+<div id="codeBox">
+<b>Map:</b> For each image in the data set, emit with probability 1/M where M is the number of points that will fit on a single compute node.<br> 
+<b>Shuffle:</b> All points map to a single machine. <br>
+<b>Reduce:</b> Build the top level of the metric tree (down to the point where a leaf node exactly equals the domain of a single compute node).<br>
+</div>
+<p/>
+<div id="codeBox">
+<b>Map:</b> For each input query, compute which leaf sub-trees the point falls into (this may be more than one if it is in an overlap region). 
+Generate one key-pair for each leaf sub-tree to be searched. <br>
+<b>Shuffle:</b> Each key is mapped to a different compute node, on which the data needed to resolve the query is in local memory.<br> 
+<b>Reduce:</b> Generate the nearest neighbor lists for each key.<br>
+</div>
+<p>The above scheme is capable of creating subsets of the imaging data that will fit in single compute nodes.  The work at UW will focus
+on how to improve the LLR scheme for application to astronomical imagery.  In particular we will address load balancing issues and how to approach astronomy data which is not point like, but is instead 
+a 2-D manifold on the surface of a sphere.</p>
+<a name="pixelz"></a>
+<h2>Multi-frequency Image Analysis</h2>
+<p>Once the footprint problem has been addressed in the context of the map-reduce framework, we will turn our attention to 
+applying those tools to research.  Much of astronomy is done in the catalog domain because working with images is very expensive.
+With thousands of processors at hand, data mining on imagery becomes feasible.
+</p><p>
+Given a multi-spectral image of the sky or even just multi-spectral
+cutouts around individual galaxies the resolved nature of these images
+provides a unique opportunity to study the physical processes that
+drive the formation and evolution of galaxies within our
+universe. Previous work has shown that the environment in which a
+galaxy resides can significantly affect the star formation activity
+within the galaxy itself. For galaxies
+in overdense regions the star formation appears to be more centrally
+condensed than for field galaxies.  A number of
+mechanisms for causing this circumnuclear activity (as opposed to the
+more general star formation in HII regions within the disks of
+galaxies) have been suggested. These include tidal stripping of the
+gas from the outskirts of a galaxy as it impacts the intracluster
+medium, merging of galaxy sub-components and galaxy harassment.
+</p><p>
+To differentiate between these multiple scenarios we need to determine
+how star formation is distributed within galaxies (e.g. in its
+simplest case ram pressure stripping will result in a suppression of
+star formation in the outer disk of a galaxy). Such a study is,
+however, limited due to the relatively small samples of galaxies used
+in current studies of the internal distribution of star formation
+(e.g. the Rose study comprised less than 30 galaxies).
+We can gain an order of magnitude increase in sample size if we
+consider the multi-spectral imaging data described above.  From these
+multicolor photometric data, we can decompose the internal photometric
+structure of galaxies into basic constituents such as the age of the
+stellar population, their metallicities and their dust content by
+fitting spectral energy distributions (SEDs) to the observed fluxes.  
+This enables, under simplifying
+assumptions, the determination of the star formation for individual
+pixels inside a galaxy, and the contribution of each pixel to the SFR
+of either the whole galaxy or a projected radial shell of that galaxy.
+</p>
+<center>
+<img src="images/pixelz.png" width="500" border="0" alt="">
+</center>
+<p>
+Pixel-z will be able to use our n-intersection tree implementation.
+Each query is essentially a point, and requires the set of images in
+all sky surveys that intersect that point.  Typically, many queries
+will be sent to the framework at any given time, therefore justifying
+the use of a tree.  We will implement the pixel-z approach for
+analyzing multi-frequency data as the initial component of this image
+processing framework as it requires a series of tasks common to most
+astronomical applications: the overlap between images from different
+spectral surveys, the projection of images to a common reference image
+and the analysis of individual images within this common reference. We
+will initially consider the brightest 10<sup>6</sup>sources in the SDSS with
+measured distances. We will map these to the GALEX ultraviolet and
+2MASS and Spitzer infrared data to provide a broad spectral range for
+each source. We note that enabling this functionality within
+map-reduce enables all image analysis applications that operate on the
+pixel level; from source identification to object classification and
+morphological characterization to variability studies via subtraction
+of one image from another.
+</p><p>
+One may consider that the information actually required to perform the
+intersection test is just the bounding box of each image, not the
+image data itself.  Since it is conceivable that all of the bounding
+box data for an entire survey could fit into the memory of a single
+compute node, using map-reduce is overkill.  However, remember that our goal
+is not just to return the indexes of filenames of overlapping images,
+but to maximize computational throughput by performing the actual
+pixel-z operation <b>in memory during the reduce phase</b>.
+</p>
+<a name="movingobjects"></a>
+<h2>Moving Objects</h2>
+<p>
+Over the coming decade, 
+astronomers will have the opportunity to revisit the same region of
+sky many thousands of times;
+opening 
+the temporal domain in
+astrophysics with the potential to discover new classes of physical
+phenomena
+The second component to this map-reduce framework is to
+consider identification of moving sources, asteroids in the outer
+regions of the Solar System (Kuiper Belt Objects, KBOs). These
+distant asteroids, in particular those beyond the orbit of Neptune,
+have the potential to explain the origins of our Solar System. KBOs
+are in orbits at distances of >30 Astronomical Units (AU) and have a
+composition that is identical to the planetesimals that coalesced to
+form the planets. Mapping their positions, distances, dynamics and
+colors (from which their composition can be determined) will constrain
+rate of accretion, collisions and orbital perturbations that led to
+the formation of the inner planets as well as provide statistical
+evidence for the possibility of additional existing and/or vanished
+planets in the outer Solar System.
+</p><p>
+KBOs tend to lie below the detection threshold of a single image and
+must, therefore, be detected through the co-addition of multiple images
+of the same region of the sky. For example, the co-addition of one year of data
+from the LSST would increase the population of known KBOs by a factor
+of 50 and our sensitivity to asteroids a factor of 100 smaller in
+mass. This will enable studies of KBOs at distance in excess of 50 AU
+where we find a dramatic (and unexplained) drop in the asteroid
+population. The challenge comes from the dynamic range in motions for
+KBOs which range from 1 arcsecond per hour at 30 AU to 1 arcsecond every
+two days for a Mars-like planet at 1000 AU from the Sun.
+</p>
+<center>
+<img src="images/obsfrequency.png" width="500" border="0" alt="">
+</center>
+<p>
+The above figure shows the time sampling for the SDSS equatorial
+imaging survey (where the same region of the sky has been imaged 40+
+times over the period of seven years). With a positional accuracy of
+0.2 arcseconds we are sensitive to detecting planet-sized systems at
+large distances. In this case a simple search algorithm for detecting
+these slow moving sources is applicable. We place a detection kernel
+on each image whereby the position of the kernel varies dependent on
+the assumed velocity of the asteroid. We then sum the likelihoods of
+these detections for a series of images and time steps to determine
+the likelihood of a detection. In practice we use Kalman filtering to
+estimate the state of the system.
+With deep imaging surveys like SDSS, we can detect these slow moving
+sources over a period of several months to years. We can in fact push
+below the detection threshold of a single image to identify such
+sources with a signal-to-noise in excess of five and at 300 AU a
+signal-to-noise in excess of 20 (detecting Mars-like planets in excess
+of 300 AU).
+</p>
+<a name="slowmovers"></a>
+<h3>Slow Movers</h3>
+<p>
+In pixel-z, although our images could cross domain boundaries, our queries never did. 
+Let us define &Delta;T as the time interval that spans the range of all the 
+observations in our data set. In this time interval, the maximum distance that an 
+object traveling across the sky at speed &omega;move is &Delta;S= &omega;&Delta;T. 
+Let us first consider the case where &Delta;S<<d<sub>c</sub> where d<sub>c</sub> is the 
+typical width of the domain of a compute node. This we call the slow-moving object scenario. 
+In this case, we want to issue a query in the form of a bounding box &Delta;B>&Delta;S. 
+This query will receive a list of images that overlap the bounding box. We can then apply 
+the Kalman filter over the region of the bounding box to detect candidate tracks.
+</p>
+<p>
+Our original ni-tree implementation could guarantee that any point query could always be 
+resolved with no more than 1 node at a given level (i.e. the tree search required no backtracking). 
+This feature was necessary at the sub-tree root level, where a compute node must be guaranteed to have 
+all the data necessary for the query. However, the modification to support queries that have a physical 
+extent means that we must make sure to 'pad' the boundaries of the our metric domain by the amount 
+&Delta;B. We do this in the fashion of a spill tree, replicating a region of width &tau;>&Delta;B beyond 
+the boundary of a node's metric domain. We define the <I>spill domain </I>as the metric 
+domain plus the 'spill' region. In pixel-z, we built an n-intersection node by acquiring 
+all of the images that intersected the metric domain. In this instance here, we instead acquire all 
+of the images that intersect the <I>spill </I>domain. Consequently, we can guarantee that if any 
+part of the query bounding box falls within a node's metric domain, it will be able to return 
+a complete set of intersecting images without having to backtrack. We call this strategy an 'ni 
+spill tree.' With this implementation, slow-moving objects can be detected in map-reduce.
+</p> 
+<div id="codeBox">
+Map: For each query bounding box, determine which node contains the required data and emit, as a key, the index for this node. <br>
+Shuffle: Each key is mapped to the required compute node. <br>
+Reduce: Generate the list of images that intersect the bounding box, then apply theKalman filter to each bounding box, returning a list of candidate tracks.<br>
+</div>
+<p>
+Having a static length &tau; obviously puts limits on the physical size of leaf nodes: 
+once a leaf node is smaller than 2&tau; across, further division along that dimension does not 
+carry any reduction in node data. In fact, it might be that we really only want the root nodes 
+of the sub-trees to be spill trees, since it is only for them that this feature is essential. 
+Searches further down into the serial portion of the sub-trees can use backtracking to discover 
+data on adjacent nodes. The optimal implementation for the sub-trees will be an issue to study 
+during our project.
+</p>
+<a name="fastmovers"></a>
+<h3>Fast Movers</h3>
+<p>
+Fast moving asteroids are any object whose speed &omega;>&tau;/&Delta;T. This means that we 
+have to make the query bounding box larger than the spill region. In this case, we are forced 
+to come up with a strategy for allowing queries to be processed on multiple compute nodes and 
+then somehow combine them back together. This application is designed to push the limits of the 
+map-reduce framework. The simplest extension is to break up a larger bounding box of width 
+&Delta;B into smaller boxes &Delta;b<sub>i</sub>,i=1..N<sub>b</sub>, where &Delta;b<sub>i</sub><&tau;. 
+The sub-boxes can then be re-combined back into their parent box (straightforward to do in map-reduce). 
+If the memory required to store all of the images for the large bounding box is too large for a 
+single node, then one can also imagine a strategy where the &#64257;rst small-box query is used 
+to identify candidate tracklets for a small &Delta;t= &tau;/&omega;<<&Delta;T. Then the 
+tracks are extrapolated into the next time interval, used to generate a new bounding box, and 
+so on until we have marched through all &Delta;T. One can also imagine building a separate tree 
+for each &Delta;t interval. In this case, each iteration in &Delta;t is simply an excursion through 
+a separate tree, many of which can be done simultaneously. There are a number of conceivable 
+approaches to this problem, and we argue that studying their performance characteristic is essential 
+for probing the limits of the map-reduce paradigm.
+</p>
+

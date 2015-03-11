@@ -1,0 +1,16 @@
+<!-- Check if vars are set, if not set them to somehting that make sense -->
+<!--#if expr="${title}" -->
+<!--#else -->
+  <!--#set var="title" value="Astro-Viz 2011" -->
+<!--#endif -->
+<div id="pageHeader">
+	 <logo>
+         </logo>
+		   <titlebar><!--#echo var="title" --></titlebar>
+		   <logotext><a href="http://www.astro.washington.edu"> University of Washington</a></logotext>
+		   <div id="nav1">
+		   <a href="home_ssg.shtml" class="<!--#echo var="home" -->">Home</a>
+		   <a href="astroviz.shtml" class="<!--#echo var="AstroViz2011" -->">AstroViz</a>
+		   </div>
+
+</div>

@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+<head profile="http://www.w3.org/2005/10/profile">
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+	<meta name="author" content="simon krughoff"/>
+	<meta name="keywords" content="" />
+	<meta name="robots" content="all" />
+   <link rel="icon" 
+      type="image/png" 
+      href="images/favico.png"/>
+	<title>UW SSG: News & Events</title>
+
+	<script type="text/javascript"></script>
+	
+	<style type="text/css" media="all">
+		@import "css/uwssg_v2.css";
+	</style>
+</head>
+<body>
+
+<!--#set var="title" value="Survey Science Group: Private Pages" -->
+<!--#set var="private" value="here" -->
+<!--#include virtual="header_main.shtml" -->
+
+<div id="container">
+
+   <div id="mainText">
+   <!--#if expr="${QUERY_STRING}" -->
+     <!--#set var="pagename" value="${QUERY_STRING}.html" -->
+   <!--#else -->
+     <!--#set var="pagename" value="private.html" -->
+   <!--#endif -->
+   <!--#include virtual="$pagename" -->
+   </div>
+   <!--#include virtual="footer_main.html" -->
+
+</div>
+
+</body>
+</html>

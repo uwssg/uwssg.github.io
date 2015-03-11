@@ -1,0 +1,74 @@
+
+
+<div id="sidebar">
+ <ul>
+  <li class="thissection">This Section</li>
+  <li><a href="research.shtml?research/dragons">DraGONS Overview</a></li>
+  <li><a href="research.shtml?research/dragons/observations">DraGONs Observing</a></li>
+  <li><a href="research.shtml?research/dragons/people">DRaGONS People</a></li>
+  <li><a href="research.shtml?research/dragons/publications">DRaGONS Publications</a></li>
+  <li><a href="research.shtml?research/dragons/data">DRaGONS Data</a></li>
+  <li class="thispage">This Page</li>
+  <li><a href="#reduction">Data Reduction</a></li>
+ </ul>
+</div>
+
+<h1>Observations </h1>
+<p>
+
+The official 40 night NOAO approved survey began in 2005. Observing
+was scheduled in six night groups during bright time: 2005 September
+16-21, 2006 March 14-19, 2006 May 11-16, 2006 October 5-10, 2007 March
+29 to 2007 April 3, and 2007 May 26 to 2007 June 1. All observations
+were done on the KPNO 4-meter Mayall telescope using the Florida
+Multi-object Imaging Near-IR grism Observational Spectrometer
+(FLAMINGOS) instrument. The detector is a 2048x2048 HgCdTe wide-field
+IR imager and multi-slit spectrometer with a pixel size of 0.3165"
+which gives a 10.8x10.8' FOV on the 4 meter telescope. Conditions were
+highly variable with about 40% of the time lost to weather, instrument
+issues and longer overheads than expected. Total integration times of
+50 minutes (dithered) gives 5\sigma limit of K ~ 20.0.
+</p>
+
+<a name="reduction"></a>
+<h3> Data Reduction and Calibration </h3>
+
+<div id="figurel">
+<img src="research/dragons/figures/exampleImage.png" width="300" border="0" alt="LLE"><br/>
+<div id="mycaptionfigr"></div>
+</div>
+<p>
+Data were processed using standard NOAO IRAF routines. A set of dark
+frames were taken and subtracted from each image. A set of 6-10
+adjacent (in time) images were combined to create a sky flat for
+division (i.e. running sky flats). The images were approximately
+aligned based on the dither offsets, then the IRAF tasks mscgetcat and
+msccmatch were used to accurately register the images for
+coaddition. The IRAF task msccmatch uses a catalog of stars from the 2
+Micron All Sky Survey (2MASS). Our final astrometry is accurate to
+subarcsecond precision, with the residual difference between the
+K-band and SDSS positions well fit by a Gaussian of width
+0.25". Example sources with the K-band image overlayed by with
+contours from the FIRST radio data are shown in Figure 1.
+</p>
+
+<div id="figurer">
+<img src="research/dragons/figures/photCal.png" width="300" border="0" alt="LLE"><br/>
+<div id="mycaptionfigr"></div>
+</div>
+<p>
+Each FLAMINGOS field was processed with SExtractor version
+2.3.2. Quoted K-band mag- nitudes are SExtractor MAG AUTO unless
+otherwise noted. Due to the large field of view of the FLAMINGOS
+instrument, a large number (~50) of bright sources detected in 2MASS
+are present in each field. Using a custom webservice interface to the
+GESTALT webservice <a
+href="http://nvogre.astro.washington.edu:8080/gestalt_home/"> WESIX
+</a> sources were cross matched with point sources from the 2MASS
+catalog having Ks < 15.3, the 5\sigma limiting magnitude for point
+sources. Saturated stars were excluded from the comparison. A linear
+least squares fit between the SExtractor and 2MASS objects was
+performed to determine the slope and zero point offset between the two
+datasets. This solution was assumed to continue linearly beyond the Ks
+= 15.3 limit. An example of this calibration is shown in Figure
+1. </p>

@@ -1,0 +1,410 @@
+body {
+	background: #333;
+	color: #ccc;
+	font-family: Helvetica, Arial, Verdana, Lucida, sans-serif;
+	margin: 10px;
+	}
+
+
+body.two-col {
+	
+	}
+
+body.three-col {
+	
+	}
+
+#wrapper {
+	width: 960px;
+	margin: 5px auto;
+	padding: 0;
+	background: #111;
+	border: 1px solid #666;
+	}
+
+#banner {
+	float: left;
+	width: 100%;
+	height: 100px;
+	background: #000 url(images/asteroid-banner-bg.jpg) 100% 50% no-repeat;
+	}
+
+#banner2 {
+	float: left;
+	width: 100%;
+        height: 100px;
+	background: #000 url(../images/deep-banner-bg.jpg) 100% 50% no-repeat;
+	}
+
+#banner3 {
+	float: left;
+	width: 100%;
+	height: 100px;
+	background: #000 url(images/saturn-banner-bg.jpg) 100% 50% no-repeat;
+	}
+
+
+#contributors #content, #contributors_alt #content {
+	background: #ccc url(../images/watermark.jpg) top right no-repeat;
+	}
+
+	#logo {
+		width: 25%;
+		float: left;
+		}
+
+		#logo img {
+			display: block;
+			margin: 20px auto;
+			padding: 10px 0 0 10px;
+			}
+
+	#catch-phrase {
+		width: 48%;
+		float: left;
+		margin-top: 10px;
+		}
+		
+		#catch-phrase h1 {
+			font: italic 24px/32px Helvetica, Arial, Verdana, Lucida, sans-serif;
+			width: 15em;
+			border-bottom: 2px solid red;
+			margin: 10px 0 0 20px;
+			background: #000;
+			}
+
+		#catch-phrase h2 {
+			font: 12px/18px Helvetica, Arial, Verdana, Lucida, sans-serif;
+			margin: 0 0 0 80px;
+			width: 25em;
+			padding: 5px;
+			background: #000;
+			}
+
+	#search {
+		width: 25%;
+		margin-top: 5px;
+		float: right;
+		font: 14px/18px Helvetica, Arial, Verdana, Lucida, sans-serif;
+		}
+
+	#global-nav {
+		background: #000;
+		display: inline;
+			}
+
+
+
+
+.two-col #content {
+	width: 670px;
+	float: left;
+	background: #ccc;
+	padding: 10px;
+	margin: 15px;
+	color: #000;
+	}
+	
+	#home  #content {
+		background: #111;
+		color: #fff;
+		}
+	
+	#content #movie {
+		float: left;
+		margin: 20px;
+		width: 320px;
+		}
+		
+	#content .fineprint {
+		font-size: 8px;
+		text-align: right;
+		}
+
+	#content .fineprint a {
+		color: #fff;
+		}
+
+	.gallery #content .fineprint {
+		font-size: 10px;
+		text-align: right;
+		}
+
+	.gallery #content .fineprint a {
+		color: #666;
+		}
+
+	#scope {
+		float: right;
+		width: 225px;
+		margin: 10px;
+		}
+		
+.three-col #content {
+	width: 48%;
+	float: left;
+	background: #000;
+	}
+
+#content #igal, #content #current-news {
+	width: 64%;
+	float: left;
+	}
+	
+
+#content #four-col {
+	clear: right;
+	float: left;
+	}
+
+#large, #synoptic, #survey, #about #telescope {
+	width: 155px;
+	float: left;
+	padding: 5px;
+	}
+	
+
+#content h1 {
+	font-weight: normal;
+	font-size: 28px;
+	margin: 20px 5px 5px;	
+	}
+
+
+#content h2, #content p.subheading {
+	font-weight: normal;
+	font-size: 24px;
+	margin: 20px 5px 5px;
+	}
+
+#content h3 {
+	font-weight: normal;
+	font-size: 18px;
+	margin: 20px 5px 5px;
+	}
+
+#content .site-map ul {
+	float: left;
+	width: 200px;
+	margin: 5px;
+	padding: 5px;
+	}
+	
+#content .site-map ul ul {
+	float: none;
+	margin: 2px 5px 20px;
+	padding: 2px 5px;
+	font-size: 0.9em;
+	}
+	
+	#content .site-map li {
+	list-style-type: none;
+	font-weight: bold;
+	}
+
+	#content .site-map ul ul li {
+	list-style-type: none;
+	font-weight: normal;
+	}
+
+#content p, #content li {
+	margin: 2px 0 10px 5px;
+	font-size: 14px;
+	}
+	
+#content .caption  {
+	font-size: 12px;
+	}
+
+	#content .left {
+		float: left;
+		margin: 10px;
+		clear: left;
+		}
+		
+	a img {	
+		border: none;
+		}
+		
+	#toc {
+	
+		}
+
+	.section {
+		background: #222;
+		margin: 10px;
+		padding: 1px 10px;
+		}
+
+	.subheading {
+		font-size: 1.2em;
+		font-weight: bold;
+		}
+
+#index p {
+	font-size: 12px;
+	}
+
+p.q {
+	padding-left: 10px;
+	text-indent: -5px;
+	color: #000;
+	}
+
+p.q strong {
+	color: #009;
+	}
+	
+p.a {
+	padding-left: 45px;
+	text-indent: -22px;
+	line-height: 1.4em;
+	color: #333;
+	}
+	
+p.a strong {
+	color: #900;
+	}
+
+hr.dec {
+	border: solid 1px maroon;
+	}
+
+ul#ig {
+	padding: 0 10px 0 0;
+	margin: 0 10px 0 0;
+	}
+
+ul#ig li {
+	list-style-type: none;
+	padding: 10px;
+	margin: 10px 5px;
+	}
+
+ul#ig li p {
+	font-size: 16px;
+	margin-left: 20px;
+	}
+
+ul#ig li img {
+	margin: 5px 20px;
+	}
+
+#highlights {
+	clear: both;
+	margin-left: 30px;
+	}
+
+#highlights h3 {
+	font-weight: normal;
+	font-size: 18px;
+	text-transform: uppercase;
+	margin: 20px 5px 5px;
+	color: #fff;
+	}
+
+#highlights h4 {
+	font-weight: normal;
+	font-size: 16px;
+	margin: 10px 5px 5px;
+	}
+
+#highlights ul {
+	margin: 0;
+	padding: 0;
+	}
+	
+#highlights li {
+	width: 31%;
+	margin: 0;
+	padding: 0 5px;
+	list-style-type: none;
+	float: left;
+	font-size: 14px;
+	}
+	
+	#highlights li img {
+		float: left;
+		margin-right: 5px;
+	margin-bottom: 40px;
+		}
+
+#home #content a, #home #highlights a {
+	color: #cfb900;
+	}
+
+#sidebar {
+	float: left;
+	width: 36%;
+	margin-top: 2.75em;
+	}
+
+#sidebar p {
+	font-size: 12px;
+	margin-left: 10px;
+	}
+
+#sidebar h3 {
+	font-weight: normal;
+	font-size: 14px;
+	margin: 10px 5px 5px;
+	}
+
+#sidebar ul {
+	margin: 0;
+	padding: 0;
+	}
+	
+#sidebar li {
+	margin: 0;
+	padding: 0 5px;
+	list-style-type: none;
+	}
+	
+	#sidebar li img {
+		float: left;
+		margin: 0 10px 15px 0;
+		}
+
+	#sidebar li p {
+		clear: left;
+		font-size: 12px;
+		margin: 5px;
+		}
+
+
+#content #threequal-col {
+	clear: right;
+	float: left;
+	}
+
+#one, #two, #three {
+	width: 210px;
+	float: left;
+	padding: 5px;
+	}
+	
+
+#footer {
+	clear: both;
+	background: #1a1a1a url(images/footer-bg.jpg) 50% 0% repeat-x;
+	padding: 1px 5%;
+	}
+
+	#footer p {
+		border-top: 2px solid red;
+		padding: 5px 5%;
+		text-align: center;
+		font-size: 11px;
+		line-height: 1.5em;
+		}
+		
+	#footer a {
+		color: #fff;
+		text-decoration: none;
+		font-weight: bold;
+		}
+		
+	#footer a:hover {
+		text-decoration: underline;
+		}
